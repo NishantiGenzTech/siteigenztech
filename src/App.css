@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.home,
+.services,
+.careers,
+.contact-us,
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.StaffingSolutions,
+.consulting {
   display: flex;
-  flex-direction: column;
+  height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 3rem;
+}
+.app{
+  background-image:  url('./images/iGenzBG.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 100vh;
+	width: 100vw;
+  position: fixed;
+}
+.home {
+  font-size: 100px;
+}
+.images {
+  width: 58%;
+  height: 61%;
+  position: absolute;
+  top: 17%;
+  left: 0;
+  margin-left: 8%;
+  background-image: url(/static/media/pexels-kaboompics-com-6375.7bef5e30.jpg);
+}
+.box {
+    width: 35%;
+    height: auto;
+    position: relative;
+    margin-top: 11%;
+    margin-left: 60%;
+    left: 0;
+    padding-left: 1%;
+    font-size: small;
+    opacity: 0.9;
+    background: #ffffff;
+}
+.box ul {
+  padding-left: 2%;
+}
+ul.a {
+  list-style-position: outside;
+}
+/* .services {
+ 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+} */
+
+.careers {
+  display: block;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+.contactus {
+  margin: auto;
+  width: 100%;
+  padding: 5% 5% 0%;
+}
+#mapDiv {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 96%;
+}
+.frameMap{
+display: inline-block;
+}
+.mapouter{    position: relative;
+text-align: right;
+height: 500px;
+display: inline-flex;
+width: 100%;;}
+.gmap_canvas {overflow: hidden;
+background: none!important;
+height: 500px;
+width: fit-content;}
+
+
+/* .contact-us {
+  background-image: url('./images/img-4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+} */
+
+
+
+
+
+
+.columns {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Remove extra left and right margins, due to padding */
+.rows {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.rows:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.aihi{
+  width: 100%;
+    padding:  5% 5%;
+}
+div.careers{
+  background-color: transparent;
+  height: 615px;
+  width: 100%;
+  overflow-y: auto;
+} 
+/* Style the counter cards */
+.split {
+    
+     width: 50%;
+     position: absolute;
+     z-index: 1;
+    
+     padding-top: 20px;
+}
+.centered p{
+    font-size: 12px;
+    font-weight: normal;
+    font-family: sans-serif;
+    display: inline;
+    padding-left: 21px;
+}
+/* Control the left side */
+.left {
+  left: 0;
+  /* background-color: #111; */
+}
+.call{
+  margin-left: -19px;
+  font-size: 24px !important;
+  font-weight: normal;
+  font-family: sans-serif;
+  display: inline;
+  padding-left: unset;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  /* background-color: red; */
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
 }
