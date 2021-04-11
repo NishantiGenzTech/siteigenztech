@@ -14,13 +14,14 @@
 } */
 .course {
 	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-	display: flex;
-	max-width: 100%;
-	margin: 20px;
-	overflow: hidden;
-	
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+    /* display: flex; */
+    /* max-width: 100%; */
+    width: 100%;
+    display: inline-block;
+    margin: 20px;
+    overflow: hidden;
 }
 
 .course h6 {
@@ -87,6 +88,7 @@
     padding: 10px 0 10px 0;
 }
 .courses-container{
-    width: 100%;
-    padding: 0 8%;
+	width: 33%;
+    display: inline-block;
+    padding: 3% 3% 0 3%;
 }

@@ -44,9 +44,9 @@ function Navbar() {
             onMouseLeave={onMouseLeave}
           >
             <Link
-              to='/Product'
+              
               className='nav-links'
-              onClick={closeMobileMenu}
+             
             >
             Product <i className='fas fa-caret-down' />
             </Link>

@@ -1,20 +1,21 @@
 .navbar {
   background: transparent;
   height: 80px;
-  display: flex;
+  display: -webkit-box;
   justify-content: center;
   align-items: center;
+  width: 100%;
   font-size: 1.2rem;
+  position: fixed;
 }
 
 .navbar-logo {
   color: #fff;
-  justify-self: start;
-  margin-left: -146px;
-  cursor: pointer;
-  text-decoration: none;
- 
-  margin-top: 41px;
+    justify-self: start;
+    margin-left: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 41px;
 }
 
 .fa-firstdraft {
@@ -28,7 +29,7 @@
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  width: 70vw;
+  width: 90vw;
   justify-content: end;
   margin-right: 2rem;
 }
@@ -43,6 +44,7 @@
   color: #000000;
   text-decoration: none;
   padding: 0.5rem 1rem;
+  font-weight: bold;
 }
 
 .nav-links:hover {

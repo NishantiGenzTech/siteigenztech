@@ -12,7 +12,7 @@ export default class CardCareer extends Component {
 					<h2>Python Developer</h2>
 					<h6>iGenZ Techonologies Pvt ltd. Bangalore Karnataka, India  12 hours ago . Over 200 applications</h6>
 				
-					<button className="btn"><i class="fab fa-linkedin"></i>  Apply</button>
+					<button className="btn"> Apply</button>
 				</div>
 				<div className="course-info">
 					<h6>Fresher preferred!</h6>
@@ -29,7 +29,7 @@ export default class CardCareer extends Component {
 					<h2>React Developer</h2>
 					<h6>iGenZ Techonologies Pvt ltd. Bangalore Karnataka, India  12 hours ago . Over 200 applications</h6>
 				
-					<button className="btn"><i class="fab fa-linkedin"></i>  Apply</button>
+					<button className="btn"> Apply</button>
 				</div>
 				<div className="course-info">
 					<h6>Asp.net preferred!</h6>
@@ -46,7 +46,7 @@ export default class CardCareer extends Component {
 					<h2>java Developer</h2>
 					<h6>iGenZ Techonologies Pvt ltd. Bangalore Karnataka, India  12 hours ago . Over 200 applications</h6>
 				
-					<button className="btn"><i class="fab fa-linkedin"></i>  Apply</button>
+					<button className="btn"> Apply</button>
 				</div>
 				<div className="course-info">
 					<h6>Fresher preferred!</h6>
