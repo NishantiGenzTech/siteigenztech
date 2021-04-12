@@ -6,10 +6,10 @@ export default function StaffingSolutions() {
   return (
     <>
      
-      <div className="container">
+      <div className="wildcard">
       <img className="images" src={homeimg} alt="Home Images"></img>
         <div className="box">
-          <div>
+          <div className="igenz">
             <p>
                 <i>
                 We help you manage business cyclicality,
@@ -26,10 +26,7 @@ export default function StaffingSolutions() {
                  
                 </i>
               </p>
-              <br />
-              <p style={{textAlign:'right'}}> -Economic times ,19
-              <sup>th</sup> Jan 2021</p>
-              <br />
+              
               <p>We offer staffing for the following functions</p>
               <p className="igenz">
                    <ul className='a'>
@@ -47,7 +44,7 @@ export default function StaffingSolutions() {
             </p>
           </div>
       </div>
-  </div>
+      </div>
 
     
     </>

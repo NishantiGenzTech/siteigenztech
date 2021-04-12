@@ -8,7 +8,7 @@ export default function ContactUs() {
 	const closeModalHandler = () => setShow(false);
 
 	return (
-		<div class="container body-content">
+		<div class=" body-content">
 			<form action="#" onsubmit="showAddress(this.address.value); return false">
 				<div style={{ display: "flex" }}>
 					<div class="col-md-6 the-map">
