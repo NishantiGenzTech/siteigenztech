@@ -1,21 +1,22 @@
 .navbar {
-  background: transparent;
-  height: 80px;
-  display: -webkit-box;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-size: 1.2rem;
-  position: fixed;
+    background: transparent;
+    height: 80px;
+    display: -webkit-box;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2rem;
+    position: fixed;
 }
 
 .navbar-logo {
   color: #fff;
-    justify-self: start;
-    margin-left: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 41px;
+  justify-self: start;
+  /* margin-left: 16px; */
+  cursor: pointer;
+  width: 5%;
+  display: inherit;
+  text-decoration: none;
 }
 
 .fa-firstdraft {
@@ -24,12 +25,12 @@
 }
 
 .nav-menu {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  width: 90vw;
+  width: 95%;
   justify-content: end;
   margin-right: 2rem;
 }

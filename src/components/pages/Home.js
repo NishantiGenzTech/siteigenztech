@@ -7,7 +7,7 @@ import homeimg1 from "../../images/pexels-pixabay-355952.jpg";
 export default function Home() {
   return (
     <>
-    <div className="container">
+   
     <div  className="wildcard">
       <img className="images" src={homeimg} alt="Home Images"></img>
         <div className="box">
@@ -19,10 +19,10 @@ export default function Home() {
                   fruits of its favourable demography over 2030s and 2040s
                   before she loses that edge in the 2050s.
               </p>
-              <br />
+              
               <p style={{textAlign:'right'}}> -Economic times ,19
               <sup>th</sup> Jan 2021</p>
-              <br />
+            
               <p className=" info">
                     We at iGenZ Technologies believe that the economic growth
                     story of our country will be fueled by Generation Z. We aim to
@@ -48,30 +48,21 @@ export default function Home() {
   </button>
       </div>
       <div  id="target" className="full-width">
-      <div  className="">
+    
       <img className="images h2Image" src={homeimg2} alt="Home Images"></img>
         <div className="home2text">
           <div>
             <p className='igenz'>
-            We are a bunch of senior professionals from HR
-             and IT background who felt the need to launch
-              a product that can integrate technology and hiring.
-               The idea was sown, as being part of various
-                recruitment drives and hiring initiatives,
-                 we have always felt the need for  a product 
-                 in the market that can cut short the entire 
-                 hiring process and make the process efficient 
-                 with the use of technology. With iGenZ we aim to
-                  launch tech centric products and services in the
-                   HR industry and leverage the next generation technologies. 
+            We help you manage business cyclicality, spikes in demand and setup scale. Our staffing solutions business can cater to niche expertise and technological skills to meet your staffing requirements. Once you identify the expertise and task at hand, we can offer you customized solutions to meet your workforce requirements through innovative models. Towards this, we offer experts with technical and functional domain skills.
+ 
               </p>
           </div>
       </div>
       
-      </div>
+      
       <div  className="">
-      <img className="home2Images" src={homeimg1} alt="Home Images"></img>
-        <div >
+      
+       
           <div className="texthome2">
             <p className='igenz'>
                   Economists say the next 10 years could become the most
@@ -81,10 +72,10 @@ export default function Home() {
                   before she loses that edge in the 2050s.
               </p>
           </div>
+          <img className="home2Images" src={homeimg1} alt="Home Images"></img>
       </div>
       </div>
-      </div>
-      </div>
+     
 
 </>
   );
