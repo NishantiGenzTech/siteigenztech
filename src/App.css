@@ -403,7 +403,7 @@ ul.a {
 	font-size: 1rem;
 	align-items: center;
 	justify-content: center;
-	height: auto;
+	height: 100vh;
 	padding: 9% 3% 3% 3%;
 	width: 100%;
 	/* padding-top: 8%; */
