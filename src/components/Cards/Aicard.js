@@ -5,7 +5,16 @@ export default function Aicard() {
 	return (
 		<>
 			{/* <button>Left</button> */}
-
+			<div className="aitopbox">
+			<p className=''>
+			Being part of various recruitment drives 
+			and hiring initiatives, we have always
+			 felt the need for  a product in the market 
+			 that can cut short the entire hiring process
+			  and make the process efficient with the use of technology. 
+  
+			  </p>
+		  </div>
 			<div className="grid">
 				<div className="grid__item">
 					<div className="card">
@@ -56,6 +65,16 @@ export default function Aicard() {
 					</div>
 				</div>
 			</div>
+			<div className="aibottombox">
+          <p className=''>
+          Being part of various recruitment drives 
+          and hiring initiatives, we have always
+           felt the need for  a product in the market 
+           that can cut short the entire hiring process
+            and make the process efficient with the use of technology. 
+
+            </p>
+        </div>
 		</>
 	);
 }

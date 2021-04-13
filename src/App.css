@@ -51,7 +51,7 @@
 	display: inline-block;
 	text-transform: uppercase;
 	color: #404040;
-	bottom: 0;
+	bottom: 188px;
 	background-color: transparent;
 	border: none;
 	outline: 0 !important;
@@ -69,13 +69,11 @@
 	margin-left: 6%;
 }
 .aihi {
-	/* width: 100%; */
-	margin: auto;
 	padding: 15% 8% 0 8%;
 	display: flex;
 	margin-left: 13%;
-	margin-right: auto;
-	justify-content: stretch;
+	/* margin-right: auto; */
+	height: 100vh;
 }
 
 .home2text {
@@ -114,7 +112,7 @@
 	margin-top: 10%;
 }
 .info {
-	font-size: 24px;
+	font-size: 22px;
 	text-align: justify;
 }
 
@@ -399,16 +397,6 @@ ul.a {
 	padding: 3%;
 	width: 100%;
 	height: 100vh;
-}
-
-.body-content {
-	display: block;
-	font-size: 1rem;
-	align-items: center;
-	justify-content: center;
-	height: auto;
-	padding: 8% 3% 3% 3%;
-	width: 100%;
 }
 .contactus {
 	margin: auto;

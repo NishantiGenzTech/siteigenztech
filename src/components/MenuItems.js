@@ -1,11 +1,11 @@
 export const MenuItems = [
   {
-    title: 'StaffingSolutions',
+    title: 'Staffing Solutions',
     path: '/StaffingSolutions',
     cName: 'dropdown-link'
   },
   {
-    title: 'AIHiring',
+    title: 'AI Hiring',
     path: '/AIHiring',
     cName: 'dropdown-link'
   }
