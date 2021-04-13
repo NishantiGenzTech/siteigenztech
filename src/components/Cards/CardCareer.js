@@ -26,27 +26,33 @@ export default class CardCareer extends Component {
 		  }, (error) => {
 			  console.log(error.text);
 		  });
+		  this.modalClose();
 	  }
-	  handleChange(e) {
-		const target = e.target;
-		const name = target.name;
-		const email = target.email;
-		const number = target.number;
-		const value = target.value;
+	//   handleChange(e) {
+	// 	const targetname = e.target.name;
+	// 	const targetemail = e.target.email;
+	// 	const targetnumber = e.target.number;
+	// 	const name = targetname.name;
+	// 	const email = targetemail.email;
+	// 	const number = targetnumber.number;
+	// 	// const value = target.value;
+	// 	const valuename = targetname.name;
+	// 	const valueemail = targetemail.email;
+	// 	const valuenumber = targetnumber.number;
 	
-		this.setState({
-		  [name]: value,
-		  [email]: value,
-		  [number]: value
-		});
-	  }
+	// 	this.setState({
+	// 	  [name]: valuename,
+	// 	  [email]: valueemail,
+	// 	  [number]: valuenumber
+	// 	});
+	//   }
 	
-	  handleSubmit(e) {
-		this.setState({ name: this.state.modalInputName });
-		this.setState({ email: this.state.modalInputEmail });
-		this.setState({ number: this.state.modalInputNumber });
-		this.modalClose();
-	  }
+	//   handleSubmit(e) {
+	// 	this.setState({ name: this.state.modalInputName });
+	// 	this.setState({ email: this.state.modalInputEmail });
+	// 	this.setState({ number: this.state.modalInputNumber });
+	// 	this.modalClose();
+	//   }
 	
 	  modalOpen() {
 		this.setState({ modal: true });
@@ -126,12 +132,12 @@ export default class CardCareer extends Component {
 		<div class="row">
          <div class="col-md-10 mx-auto">
             <div class="myform form ">
-               <form action="" method="post" name="login">
+               <form action="" method="post" onSubmit={this.sendEmail} name="login">
                   <div class="form-group">
 				 
                      <input type="text"
-					 value={this.state.modalInputName}
-					 onChange={e => this.handleChange(e)}
+					
+					 
 					 name="name" 
 					 class="form-control my-input"
 					 placeholder="Name" />
@@ -141,15 +147,15 @@ export default class CardCareer extends Component {
 					 type="text"
 					 name="email"  
 					 class="form-control my-input"
-					 value={this.state.modalInputEmail}
-				  	onChange={e => this.handleChange(e)}
+					 
+				  
 					placeholder="Email" />
                   </div>
                   <div class="form-group">
                      <input type="number"
 					  min="0" name="number" 
-					  value={this.state.modalInputNumber}
-				  	onChange={e => this.handleChange(e)}  
+					  
+				  	
 					  class="form-control my-input"
 					   placeholder="Phone" />
                   </div>
