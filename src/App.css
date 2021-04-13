@@ -51,7 +51,7 @@
     display: inline-block;
     text-transform: uppercase;
     color: #404040;
-    bottom: 0;
+	bottom: 188px;
     background-color: transparent;
     border: none;
     outline: 0 !important;
@@ -70,13 +70,11 @@
   margin-left: 6%;
 }
 .aihi {
-	/* width: 100%; */
-	margin: auto;
 	padding: 15% 8% 0 8%;
-	display: flex;
-	margin-left: 13%;
-	margin-right: auto;
-	justify-content: stretch;
+    display: flex;
+    margin-left: 13%;
+    /* margin-right: auto; */
+    height: 100vh;
 }
 
 .home2text{
@@ -400,6 +398,7 @@ ul.a {
 	height: auto;
 	padding: 3%;
 	width: 100%;
+	height: 100vh;
 }
 .contactus {
 	margin: auto;

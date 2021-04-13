@@ -79,16 +79,22 @@
     color: #fff;
     font-size: 16px;
     padding: 12px 25px;
-    /* bottom: 30px; */
+    bottom: 30px;
     float: right;
-    /* right: 30px; */
+    right: 30px;
     letter-spacing: 1px;
 }
 .course-info h4{  
     padding: 10px 0 10px 0;
+    font-size: 16px;
 }
 .courses-container{
 	width: 33%;
     display: inline-block;
     padding: 3% 3% 0 3%;
 }
+
+
+
+
+
