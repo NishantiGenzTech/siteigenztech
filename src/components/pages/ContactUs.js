@@ -6,16 +6,16 @@ export default function ContactUs() {
 	const [show, setShow] = useState(false);
 
 	const closeModalHandler = () => setShow(false);
-
+	console.log(show);
 	return (
-		<div class=" body-content">
+		<div className="body-content">
 			<form action="#" onsubmit="showAddress(this.address.value); return false">
-				<div>
-					<div class="col-md-6 the-map">
+				<div className="content">
+					<div className="col-md-6 the-map">
 						<div className=" mapouter">
 							<iframe
 								width="629"
-								height="500"
+								height="375"
 								id="gmap_canvas"
 								src="https://maps.google.com/maps?q=4th%20Cross,%202nd%20main,%20Hongasandra%20,%20Bommanahalli%20,%20Bangalore&t=&z=19&ie=UTF8&iwloc=&output=embed"
 								scrolling="no"
@@ -25,40 +25,38 @@ export default function ContactUs() {
 						</div>
 					</div>
 					<div class="col-md-6 centereds">
-						<div>
+						<div className="textfield">
 							<div className="centered centeredmob">
-								<div>
-									<h6 className="textheader">
-										{" "}
-										You can reach out to us via one of the below channels{" "}
+								<div className="textheader">
+									<h6 >
+										You can reach out to us via one of the below channels
 									</h6>
 								</div>
 								<br />
-								<div>
+								<div className="iconalign">
 									<i className="fas fa-map-marker-alt "> </i>
 									&nbsp;&nbsp;&nbsp;
-									<p>
+									<p className="paragraph">
 										2 nd main 4 th cross,
 										<br /> Bangalore: 560068
-										<br /> Karnataka, IN{" "}
+										<br /> Karnataka, IN
 									</p>
 								</div>
 								<br />
-								<div>
+								<div className="iconalign">
 									<i className="fas fa-envelope-open-text "> </i>
 									&nbsp;&nbsp;&nbsp;
-									<p> info @igenztech.com </p>
+									<p className="paragraph"> info @igenztech.com </p>
 								</div>
 								<br />
-								<div>
+								<div className="iconalign">
 									<i className="fas fa-headset "> </i>
 									&nbsp;&nbsp;&nbsp;
-									<p> 1800 000 12345 </p>
+									<p className="paragraph"> 1800 000 12345 </p>
 								</div>
 								<br />
 								<div className="call">
 									<p> Or use our &nbsp;&nbsp; </p>
-
 									<input
 										onClick={() => setShow(true)}
 										className="btn-openModal inputlink"
