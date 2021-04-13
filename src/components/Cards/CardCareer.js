@@ -30,9 +30,9 @@ export default class CardCareer extends Component {
 	  handleChange(e) {
 		const target = e.target;
 		const name = target.name;
-		// const email = target.email;
-		// const number = target.number;
-		// const value = target.value;
+		const email = target.email;
+		const number = target.number;
+		const value = target.value;
 	
 		this.setState({
 		  [name]: value,
