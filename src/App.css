@@ -38,84 +38,82 @@
 }
 /*.....Nishant ...*/
 .images {
-  width: 50%;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
-  margin-top: 8%;
-  left: 0;
-  margin-left: 6%;
+	width: 50%;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+	margin-top: 8%;
+	left: 0;
+	margin-left: 6%;
 }
 .top-button {
-  padding: 15px 20px 5px;
-    font-size: 13px;
-    display: inline-block;
-    text-transform: uppercase;
-    color: #404040;
+	padding: 15px 20px 5px;
+	font-size: 13px;
+	display: inline-block;
+	text-transform: uppercase;
+	color: #404040;
 	bottom: 188px;
-    background-color: transparent;
-    border: none;
-    outline: 0 !important;
-    cursor: pointer;
-    transform: scale(1);
-    animation: updown 1s ease-out infinite;
-  position: relative;
-  
+	background-color: transparent;
+	border: none;
+	outline: 0 !important;
+	cursor: pointer;
+	transform: scale(1);
+	animation: updown 1s ease-out infinite;
+	position: relative;
 }
 .images2home {
-  width: 50%;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
-  margin-top: -2%;
-  left: 0;
-  margin-left: 6%;
+	width: 50%;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+	margin-top: -2%;
+	left: 0;
+	margin-left: 6%;
 }
 .aihi {
 	padding: 15% 8% 0 8%;
-    display: flex;
-    margin-left: 13%;
-    /* margin-right: auto; */
-    height: 100vh;
+	display: flex;
+	margin-left: 13%;
+	/* margin-right: auto; */
+	height: 100vh;
 }
 
-.home2text{
-  width: 50%;
-  background: white;
-  opacity: 0.9;
-  bottom: -38%;
-  position: absolute;
-  border-radius: 10px;
-  padding: 1%;
-    box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+.home2text {
+	width: 50%;
+	background: white;
+	opacity: 0.9;
+	bottom: -38%;
+	position: absolute;
+	border-radius: 10px;
+	padding: 1%;
+	box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
 }
-.home2Images{
-  width: 50%;
-  /* display: inline-block; */
-  bottom: -35%;
-  margin-left: 49%;
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+.home2Images {
+	width: 50%;
+	/* display: inline-block; */
+	bottom: -35%;
+	margin-left: 49%;
+	border-radius: 10px;
+	position: relative;
+	box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
 }
-.texthome2{
-  background: white;
-  opacity: 0.9;
-  border-radius: 10px;
-  padding: 1%;
-  /* margin-left: -14%; */
-  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
-  /* width: 100%; */
-  position: relative;
-  /* bottom: -34%; */
-  top: 22%;
-  width: 82%;
+.texthome2 {
+	background: white;
+	opacity: 0.9;
+	border-radius: 10px;
+	padding: 1%;
+	/* margin-left: -14%; */
+	box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+	/* width: 100%; */
+	position: relative;
+	/* bottom: -34%; */
+	top: 22%;
+	width: 82%;
 }
-.h2Image{
-  
-  margin-top: 10%;
+.h2Image {
+	margin-top: 10%;
 }
-.info{
-  font-size: 22px;
-    text-align: justify;
+.info {
+	font-size: 22px;
+	text-align: justify;
 }
 
 .App {
@@ -239,19 +237,19 @@
 	}
 }
 .scroll-down {
-  position: absolute;
-  padding: 15px 20px 5px;
-  font-size: 13px;
-  /* display: inline-block; */
-  text-transform: uppercase;
-  color: #404040;
-  bottom: 0;
-  background-color: transparent;
-  border: none;
-  outline: 0 !important;
-  cursor: pointer;
-  transform: scale(1);
-  animation: updown 1s ease-out infinite;
+	position: absolute;
+	padding: 15px 20px 5px;
+	font-size: 13px;
+	/* display: inline-block; */
+	text-transform: uppercase;
+	color: #404040;
+	bottom: 0;
+	background-color: transparent;
+	border: none;
+	outline: 0 !important;
+	cursor: pointer;
+	transform: scale(1);
+	animation: updown 1s ease-out infinite;
 }
 .scroll-down .scroll-down__arrow-down {
 	width: 60px;
@@ -292,63 +290,63 @@
 	stroke-dashoffset: 300;
 }
 .top-button .scroll-down__arrow-down {
-  width: 60px;
-  height: 60px;
-  padding: 8px 0 0 0;
-  pointer-events: none;
-  fill: red;
-  transition: all 0.8s ease;
+	width: 60px;
+	height: 60px;
+	padding: 8px 0 0 0;
+	pointer-events: none;
+	fill: red;
+	transition: all 0.8s ease;
 }
 .top-button .scroll-down__frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
 }
 .top-button .scroll-down__frame rect {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: #333;
-  stroke-width: 4;
-  stroke-dasharray: 0, 250;
-  transition: all 0.5s ease-in-out !important;
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke: #333;
+	stroke-width: 4;
+	stroke-dasharray: 0, 250;
+	transition: all 0.5s ease-in-out !important;
 }
 .top-button:hover {
-  -o-animation: spring-in 0.75s ease-in forwards;
-  -moz-animation: spring-in 0.75s ease-in forwards;
-  -webkit-animation: spring-in 0.75s ease-in forwards;
-  animation: spring-in 0.75s ease-in forwards;
+	-o-animation: spring-in 0.75s ease-in forwards;
+	-moz-animation: spring-in 0.75s ease-in forwards;
+	-webkit-animation: spring-in 0.75s ease-in forwards;
+	animation: spring-in 0.75s ease-in forwards;
 }
 .top-button:hover .scroll-down__arrow-down {
-  fill: #333;
+	fill: #333;
 }
 .top-button:hover .scroll-down__frame rect {
-  stroke-dasharray: 250, 0;
-  stroke-dashoffset: 300;
+	stroke-dasharray: 250, 0;
+	stroke-dashoffset: 300;
 }
 .wildcard {
-      /* height: inherit; */
-      background: inherit;
-      /* display: inline-flex; */
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100vh;
-      /* position: relative; */
-      background: inherit;
+	/* height: inherit; */
+	background: inherit;
+	/* display: inline-flex; */
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	/* position: relative; */
+	background: inherit;
 }
 
 .full-width {
-  display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 111vh;
-   
-    background: inherit;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 111vh;
+
+	background: inherit;
 }
 
 /*...Nishant ....*/
@@ -417,7 +415,7 @@ ul.a {
 .mapouter {
 	position: relative;
 	text-align: right;
-	height: 500px;
+	/* height: 500px; */
 	display: inline-flex;
 	width: 100%;
 }
@@ -461,6 +459,7 @@ ul.a {
 	transform: translate(11%, -50%);
 	text-align: left;
 	display: contents;
+	line-height: 1;
 }
 .container.body-content {
 	padding: 8px 0;
@@ -490,7 +489,7 @@ button {
 .col-md-6 {
 	width: 50%;
 	display: inline-block;
-  padding: 8% 0 0 4%;
+	padding: 8% 0 0 4%;
 }
 .call {
 	margin-left: 0;
@@ -509,10 +508,9 @@ button {
 }
 .textheader {
 	font-size: x-large;
+	/* border: solid 3px blue; */
 }
-.centereds {
-	padding: 13% 0%;
-}
+
 .cpara {
 	position: relative;
 
@@ -650,5 +648,32 @@ button {
 }
 
 .iconalign {
-	align-self: center;
+	display: inline-block;
+	/* border: solid 3px red; */
+}
+
+.paragraph {
+	display: inline-block;
+}
+
+.the-map {
+	display: inline-block;
+	padding: 0% 0% 0% 5%;
+}
+
+.centereds {
+	display: inline-block;
+	padding: 0% 0% 0% 5%;
+	line-height: 5;
+	/* border: solid 3px black; */
+}
+.textfield {
+	/* border: solid 3px green; */
+	margin-right: 10%;
+}
+.content {
+	display: block;
+	line-height: 0;
+	/* padding: 4% 0 0 2%; */
+	padding-top: 2%;
 }
