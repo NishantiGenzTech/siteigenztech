@@ -83,6 +83,9 @@
     /* display: flex; */
     width: 50%;
 }
+.aitopbox p{
+	margin-bottom: 0rem;
+}
 .aibottombox{
 	background: white;
     opacity: 0.9;
@@ -95,6 +98,9 @@
     /* bottom: -34%; */
     top: 60%;
     height: auto;
-    width: 58%;
-    left: 40%;
+    width: 49%;
+    left: 50%;
+}
+.aibottombox p{
+	     margin-bottom: 0rem;
 }
