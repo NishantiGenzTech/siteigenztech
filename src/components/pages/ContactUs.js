@@ -10,7 +10,7 @@ export default function ContactUs() {
 	return (
 		<div class=" body-content">
 			<form action="#" onsubmit="showAddress(this.address.value); return false">
-				<div style={{ display: "flex" }}>
+				<div>
 					<div class="col-md-6 the-map">
 						<div className=" mapouter">
 							<iframe
@@ -34,46 +34,26 @@ export default function ContactUs() {
 									</h6>
 								</div>
 								<br />
-								<div
-									style={{
-										display: "flex",
-										flexDirection: "row",
-									}}
-								>
-									<i className="fas fa-map-marker-alt iconalign"> </i>
+								<div>
+									<i className="fas fa-map-marker-alt "> </i>
 									&nbsp;&nbsp;&nbsp;
-									<p style={{ margin: 0 }}>
+									<p>
 										2 nd main 4 th cross,
 										<br /> Bangalore: 560068
 										<br /> Karnataka, IN{" "}
 									</p>
 								</div>
 								<br />
-								<div
-									style={{
-										display: "flex",
-										flexDirection: "row",
-									}}
-								>
-									<i
-										className="fas fa-envelope-open-text iconalign"
-										style={{ alignSelf: "center" }}
-									>
-										{" "}
-									</i>
+								<div>
+									<i className="fas fa-envelope-open-text "> </i>
 									&nbsp;&nbsp;&nbsp;
-									<p style={{ margin: 0 }}> info @igenztech.com </p>
+									<p> info @igenztech.com </p>
 								</div>
 								<br />
-								<div
-									style={{
-										display: "flex",
-										flexDirection: "row",
-									}}
-								>
-									<i className="fas fa-headset iconalign"> </i>
+								<div>
+									<i className="fas fa-headset "> </i>
 									&nbsp;&nbsp;&nbsp;
-									<p style={{ margin: 0 }}> 1800 000 12345 </p>
+									<p> 1800 000 12345 </p>
 								</div>
 								<br />
 								<div className="call">
