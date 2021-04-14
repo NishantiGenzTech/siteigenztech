@@ -26,8 +26,9 @@ export const Modal = ({ show, close }) => {
 		<>
 			{show ? (
 				<div className="modelbg">
+        <div className="modal d-block">
 					<div
-						className="modal-wrapper"
+						className="modal-container"
 						style={{
 							transform: show ? "translateY(0vh)" : "translateY(-100vh)",
 							opacity: show ? "1" : "0",
@@ -75,14 +76,11 @@ export const Modal = ({ show, close }) => {
 									</button>
 								</form>
 							</div>
-							<div className="modal-footer">
-								<button onClick={close} className="btn-cancel">
-									Close
-								</button>
-							</div>
+						
 						</div>
 					</div>
 				</div>
+        </div>
 			) : (
 				""
 			)}{" "}

@@ -16,33 +16,71 @@ export default class CardCareer extends Component {
 			modal: false,
 			name: "",
 			email: "",
-			number: "",
+			contact: "",
 			modalInputName: "",
 			modalInputEmail: "",
 			modalInputNumber: "",
 		};
 	}
-
-	sendEmail = (e) => {
-		e.preventDefault();
-		emailjs
-			.sendForm(
-				"service_k66nlin",
-				"template_waqpg06",
-				e.target,
-				"user_AxPlzgIo4G8UqVAGZredu"
-			)
-			.then(
-				(result) => {
-					console.log(result.text);
-				},
-				(error) => {
-					console.log(error.text);
-				}
-			);
-		this.modalClose();
-	};
-
+	modalClose() {
+		this.setState({
+			modalInputName: "",
+			modalInputEmail: "",
+			modalInputNumber: "",
+			modal: false,
+		});
+	}
+//  sendEmail = (e) => {
+// 		e.preventDefault();
+// 		emailjs
+// 			.sendForm(
+// 				"service_k66nlin",
+// 				"template_waqpg06",
+// 				e.target,
+// 				"user_AxPlzgIo4G8UqVAGZredu"
+// 			)
+// 			.then(
+// 				(result) => {
+// 					console.log(result.text);
+// 				},
+// 				(error) => {
+// 					console.log(error.text);
+// 				}
+// 			);
+// 		this.modalClose();
+// 	};
+handleSubmit(e) {
+    e.preventDefault()
+    // const { name, email, contact, message } = this.state
+    // let templateParams = {
+    //   from_name: email,
+    //   to_name: '<YOUR_EMAIL_ID>',
+    //   subject: subject,
+    //   message_html: message,
+    //  }
+     emailjs.send(
+		"service_k66nlin",
+		"template_waqpg06",
+		e.target,
+		"user_AxPlzgIo4G8UqVAGZredu"
+     )
+     this.resetForm(e);
+	 this.thanku();
+ }
+ thanku() {
+    alert("Thanku for submitting ");
+  }
+ resetForm() {
+    this.setState({
+      name: '',
+      email: '',
+      contact: '',
+	  modal: false,
+    })
+  }
+  handleChange = (param, e) => {
+    this.setState({ [param]: e.target.value })
+  }
 	modalOpen() {
 		this.setState({ modal: true, text: "Python Developer" });
 	}
@@ -64,14 +102,7 @@ export default class CardCareer extends Component {
 	// 	this.setState({});
 	// }
 
-	modalClose() {
-		this.setState({
-			modalInputName: "",
-			modalInputEmail: "",
-			modalInputNumber: "",
-			modal: false,
-		});
-	}
+	
 	render() {
 		// var text1 = "";
 		return (
@@ -176,35 +207,40 @@ export default class CardCareer extends Component {
 								<form
 									action=""
 									method="post"
-									onSubmit={this.sendEmail}
+									onSubmit={this.handleSubmit.bind(this)}
 									name="login"
 								>
 									<div class="form-group">
 										<input
 											type="text"
 											name="name"
+											value={this.state.name}
 											class="form-control my-input"
 											placeholder="Name"
+											onChange={this.handleChange.bind(this, 'name')}
 										/>
 									</div>
 									<div class="form-group">
 										<input
 											type="text"
 											name="email"
+											value={this.state.email}
+                							onChange={this.handleChange.bind(this, 'email')}
 											class="form-control my-input"
 											placeholder="Email"
 										/>
 									</div>
 									<div class="form-group">
 										<input
-											type="number"
-											min="0"
-											name="number"
+											type="text"
+											value={this.state.contact}
+                							onChange={this.handleChange.bind(this, 'contact')}
+											name="contact"
 											class="form-control my-input"
 											placeholder="Phone"
 										/>
 									</div>
-									<button onClick={(e) => this.sendEmail(e)} type="button">
+									<button onClick={this.sendEmail} type="button">
 										send
 									</button>
 								</form>
