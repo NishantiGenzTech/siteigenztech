@@ -14,7 +14,7 @@ export default function ContactUs() {
 					<div className="col-md-6 the-map">
 						<div className=" mapouter">
 							<iframe
-								width="629"
+								width="700"
 								height="375"
 								id="gmap_canvas"
 								src="https://maps.google.com/maps?q=4th%20Cross,%202nd%20main,%20Hongasandra%20,%20Bommanahalli%20,%20Bangalore&t=&z=19&ie=UTF8&iwloc=&output=embed"
@@ -22,15 +22,14 @@ export default function ContactUs() {
 							></iframe>
 							<a href="https://embedgooglemap.net/maps/15"> </a>
 							<a href="https://www.embedgooglemap.net"> </a>
+							<Modal show={show} close={closeModalHandler} />
 						</div>
 					</div>
 					<div class="col-md-6 centereds">
 						<div className="textfield">
 							<div className="centered centeredmob">
 								<div className="textheader">
-									<h6 >
-										You can reach out to us via one of the below channels
-									</h6>
+									<h6>You can reach out to us via one of the below channels</h6>
 								</div>
 								<br />
 								<div className="iconalign">
@@ -67,7 +66,7 @@ export default function ContactUs() {
 								</div>
 							</div>
 						</div>{" "}
-						<Modal show={show} close={closeModalHandler} />
+						{/* <Modal show={show} close={closeModalHandler} /> */}
 						<p id="error-msg"></p>
 					</div>
 				</div>

@@ -6,15 +6,13 @@ export default function Aicard() {
 		<>
 			{/* <button>Left</button> */}
 			<div className="aitopbox">
-			<p className=''>
-			Being part of various recruitment drives 
-			and hiring initiatives, we have always
-			 felt the need for  a product in the market 
-			 that can cut short the entire hiring process
-			  and make the process efficient with the use of technology. 
-  
-			  </p>
-		  </div>
+				<p className="">
+					Being part of various recruitment drives and hiring initiatives, we
+					have always felt the need for a product in the market that can cut
+					short the entire hiring process and make the process efficient with
+					the use of technology.
+				</p>
+			</div>
 			<div className="grid">
 				<div className="grid__item">
 					<div className="card">
@@ -66,15 +64,13 @@ export default function Aicard() {
 				</div>
 			</div>
 			<div className="aibottombox">
-          <p className=''>
-          Being part of various recruitment drives 
-          and hiring initiatives, we have always
-           felt the need for  a product in the market 
-           that can cut short the entire hiring process
-            and make the process efficient with the use of technology. 
-
-            </p>
-        </div>
+				<p className="">
+					With our AI powered hiring capability, recruiters can cut down their
+					recruiting costs and time by nearly half. Our hiring tool evaluates
+					and ranks candidates on a host of customized parameters to avoid bias
+					and bring in improved accuracy
+				</p>
+			</div>
 		</>
 	);
 }
