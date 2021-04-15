@@ -201,52 +201,7 @@ handleSubmit(e) {
 				>
 					<h2>{`You Are Applying For The Post OF` + "  " + this.state.text}</h2>
 
-					<div class="row">
-						<div class="col-md-10 mx-auto">
-							<div class="myform form ">
-								<form
-									action=""
-									method="post"
-									onSubmit={this.handleSubmit.bind(this)}
-									name="login"
-								>
-									<div class="form-group">
-										<input
-											type="text"
-											name="name"
-											value={this.state.name}
-											class="form-control my-input"
-											placeholder="Name"
-											onChange={this.handleChange.bind(this, 'name')}
-										/>
-									</div>
-									<div class="form-group">
-										<input
-											type="text"
-											name="email"
-											value={this.state.email}
-                							onChange={this.handleChange.bind(this, 'email')}
-											class="form-control my-input"
-											placeholder="Email"
-										/>
-									</div>
-									<div class="form-group">
-										<input
-											type="text"
-											value={this.state.contact}
-                							onChange={this.handleChange.bind(this, 'contact')}
-											name="contact"
-											class="form-control my-input"
-											placeholder="Phone"
-										/>
-									</div>
-									<button onClick={this.sendEmail} type="button">
-										send
-									</button>
-								</form>
-							</div>
-						</div>
-					</div>
+					
 				</ContactForm>
 			</>
 		);

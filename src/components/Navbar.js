@@ -34,7 +34,7 @@ function Navbar() {
 				<NavLink
 					to="/"
 					className="navbar-logo"
-					activeClassName="active"
+					
 					onClick={closeMobileMenu}
 				>
 					<img
