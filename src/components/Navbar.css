@@ -69,7 +69,8 @@
 
 .active {
 	text-decoration: underline;
-	color: #0761ab;
+	color: white;
+    background-color: #4689c0;
 }
 @media screen and (max-width: 960px) {
 	.NavbarItems {
