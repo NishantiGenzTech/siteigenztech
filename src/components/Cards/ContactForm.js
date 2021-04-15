@@ -21,12 +21,8 @@ const ContactForm = ({ handleClose, show, children }) => {
 					console.log(error.text);
 				}
 			);
-<<<<<<< HEAD
 			
 			handleClose();
-=======
-		handleClose();
->>>>>>> 34202f30c1c377d96f08f3201cebb67fbd893452
 	}
 	return (
 		<div className={showHideClassName}>
