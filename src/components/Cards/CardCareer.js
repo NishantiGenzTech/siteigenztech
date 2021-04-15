@@ -30,57 +30,57 @@ export default class CardCareer extends Component {
 			modal: false,
 		});
 	}
-//  sendEmail = (e) => {
-// 		e.preventDefault();
-// 		emailjs
-// 			.sendForm(
-// 				"service_k66nlin",
-// 				"template_waqpg06",
-// 				e.target,
-// 				"user_AxPlzgIo4G8UqVAGZredu"
-// 			)
-// 			.then(
-// 				(result) => {
-// 					console.log(result.text);
-// 				},
-// 				(error) => {
-// 					console.log(error.text);
-// 				}
-// 			);
-// 		this.modalClose();
-// 	};
-handleSubmit(e) {
-    e.preventDefault()
-    // const { name, email, contact, message } = this.state
-    // let templateParams = {
-    //   from_name: email,
-    //   to_name: '<YOUR_EMAIL_ID>',
-    //   subject: subject,
-    //   message_html: message,
-    //  }
-     emailjs.send(
-		"service_k66nlin",
-		"template_waqpg06",
-		e.target,
-		"user_AxPlzgIo4G8UqVAGZredu"
-     )
-     this.resetForm(e);
-	 this.thanku();
- }
- thanku() {
-    alert("Thanku for submitting ");
-  }
- resetForm() {
-    this.setState({
-      name: '',
-      email: '',
-      contact: '',
-	  modal: false,
-    })
-  }
-  handleChange = (param, e) => {
-    this.setState({ [param]: e.target.value })
-  }
+	//  sendEmail = (e) => {
+	// 		e.preventDefault();
+	// 		emailjs
+	// 			.sendForm(
+	// 				"service_k66nlin",
+	// 				"template_waqpg06",
+	// 				e.target,
+	// 				"user_AxPlzgIo4G8UqVAGZredu"
+	// 			)
+	// 			.then(
+	// 				(result) => {
+	// 					console.log(result.text);
+	// 				},
+	// 				(error) => {
+	// 					console.log(error.text);
+	// 				}
+	// 			);
+	// 		this.modalClose();
+	// 	};
+	handleSubmit(e) {
+		e.preventDefault();
+		// const { name, email, contact, message } = this.state
+		// let templateParams = {
+		//   from_name: email,
+		//   to_name: '<YOUR_EMAIL_ID>',
+		//   subject: subject,
+		//   message_html: message,
+		//  }
+		emailjs.send(
+			"service_k66nlin",
+			"template_waqpg06",
+			e.target,
+			"user_AxPlzgIo4G8UqVAGZredu"
+		);
+		this.resetForm(e);
+		this.thanku();
+	}
+	thanku() {
+		alert("Thanku for submitting ");
+	}
+	resetForm() {
+		this.setState({
+			name: "",
+			email: "",
+			contact: "",
+			modal: false,
+		});
+	}
+	handleChange = (param, e) => {
+		this.setState({ [param]: e.target.value });
+	};
 	modalOpen() {
 		this.setState({ modal: true, text: "Python Developer" });
 	}
@@ -102,7 +102,6 @@ handleSubmit(e) {
 	// 	this.setState({});
 	// }
 
-	
 	render() {
 		// var text1 = "";
 		return (
@@ -199,8 +198,9 @@ handleSubmit(e) {
 					show={this.state.modal}
 					handleClose={(e) => this.modalClose(e)}
 				>
-					<h2>{`You Are Applying For The Post OF` + "  " + this.state.text}</h2>
-
+					<h2 className="popupheader">
+						{` Applying For ` + "  " + this.state.text}
+					</h2>
 					<div class="row">
 						<div class="col-md-10 mx-auto">
 							<div class="myform form ">
@@ -216,8 +216,8 @@ handleSubmit(e) {
 											name="name"
 											value={this.state.name}
 											class="form-control my-input"
-											placeholder="Name"
-											onChange={this.handleChange.bind(this, 'name')}
+											placeholder="Full Name..."
+											onChange={this.handleChange.bind(this, "name")}
 										/>
 									</div>
 									<div class="form-group">
@@ -225,23 +225,24 @@ handleSubmit(e) {
 											type="text"
 											name="email"
 											value={this.state.email}
-                							onChange={this.handleChange.bind(this, 'email')}
+											onChange={this.handleChange.bind(this, "email")}
 											class="form-control my-input"
-											placeholder="Email"
+											placeholder="Email..."
 										/>
 									</div>
 									<div class="form-group">
 										<input
 											type="text"
 											value={this.state.contact}
-                							onChange={this.handleChange.bind(this, 'contact')}
+											onChange={this.handleChange.bind(this, "contact")}
 											name="contact"
 											class="form-control my-input"
-											placeholder="Phone"
+											placeholder="Contact..."
 										/>
 									</div>
 									<button onClick={this.sendEmail} type="button">
-										send
+										Submit
+										<i class="fa fa-paper-plane"></i>
 									</button>
 								</form>
 							</div>

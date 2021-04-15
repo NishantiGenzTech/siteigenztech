@@ -6,7 +6,6 @@ const ContactForm = ({ handleClose, show, children }) => {
 	return (
 		<div className={showHideClassName}>
 			<div className="modal-container">
-				<h1></h1>
 				<a
 					href="javascript:;"
 					className="modal-close"

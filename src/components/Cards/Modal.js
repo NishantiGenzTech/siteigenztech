@@ -26,61 +26,67 @@ export const Modal = ({ show, close }) => {
 		<>
 			{show ? (
 				<div className="modelbg">
-        <div className="modal d-block">
-					<div
-						className="modal-container"
-						style={{
-							transform: show ? "translateY(0vh)" : "translateY(-100vh)",
-							opacity: show ? "1" : "0",
-						}}
-					>
-						<div className="modal-header">
-							<p style={{ "font-size": "27px" }}>Contact Us</p>
-							<span onClick={close} className="close-modal-btn">
-								x
-							</span>
-						</div>
-						<div className="modal-content">
-							<div className="modal-body">
-								<form action="#" onSubmit={sendEmail}>
-									<label for="firstname">
-										<i class="cntfrmicn fa fa-user" />
-										<input
-											name="name"
-											class="form-fields"
-											placeholder="Name"
-											type="text"
-										/>
-									</label>
-									<label for="email">
-										<i class="cntfrmicn fa fa-envelope" />
-										<input
-											name="email"
-											class="form-fields"
-											placeholder="Email_Id"
-											type="text"
-										/>
-									</label>
-									<label for="contact">
-										<i class="cntfrmicn fa fa-phone" />
-										<input
-											name="contact"
-											class="form-fields"
-											placeholder="Contact"
-											type="text"
-										/>
-									</label>
-
-									<button class="form-fields button" type="submit" value="Send">
-										Send <i class="fa fa-paper-plane"></i>
-									</button>
-								</form>
+					<div className="modal d-block">
+						<div
+							className="modal-container"
+							style={{
+								transform: show ? "translateY(0vh)" : "translateY(-100vh)",
+								opacity: show ? "1" : "0",
+							}}
+						>
+							<div className="modal-header">
+								<p style={{ "font-size": "27px", color: "white" ,textAlign:"center"}}>
+									Contact Us
+								</p>
+								<span onClick={close} className="close-modal-btn">
+									x
+								</span>
 							</div>
-						
+							<div className="modal-content">
+								<div className="modal-body">
+									<form action="#" onSubmit={sendEmail}>
+										<label for="firstname">
+											{/* <i class="cntfrmicn fa fa-user" /> */}
+											<input
+												name="name"
+												class="form-fields"
+												placeholder="Full Name..."
+												type="text"
+											/>
+										</label>
+										<label for="email">
+											{/* <i class="cntfrmicn fa fa-envelope" /> */}
+											<input
+												name="email"
+												class="form-fields"
+												placeholder="Email..."
+												type="text"
+											/>
+										</label>
+										<label for="contact">
+											{/* <i class="cntfrmicn fa fa-phone" /> */}
+											<input
+												name="contact"
+												class="form-fields"
+												placeholder="Contact..."
+												type="text"
+											/>
+										</label>
+
+										<button
+											class="form-fields button"
+											type="submit"
+											value="Send"
+										>
+											Submit
+											<i class="fa fa-paper-plane"></i>
+										</button>
+									</form>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-        </div>
 			) : (
 				""
 			)}{" "}
