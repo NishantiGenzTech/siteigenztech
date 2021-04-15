@@ -17,6 +17,7 @@
 	width: 5%;
 	display: inherit;
 	text-decoration: none;
+	background-color: transparent !important;
 }
 
 .fa-firstdraft {

@@ -31,7 +31,7 @@ function Navbar() {
 	return (
 		<>
 			<nav className="navbar">
-				<Navbar
+				<NavLink
 					to="/"
 					className="navbar-logo"
 					
@@ -42,7 +42,7 @@ function Navbar() {
 						src={require("../images/igenzlogo-removebg-preview.png")}
 						alt="logo"
 					/>
-				</Navbar>
+				</NavLink>
 				<div className="menu-icon" onClick={handleClick}>
 					<i className={click ? "fas fa-times" : "fas fa-bars"} />
 				</div>

@@ -100,13 +100,4 @@ export default class ContactUs extends Component {
     </section>
 	);
 	}
-	openModal() {
-		this.setState({ isModalOpen: true });
-		console.log("1");
-	}
-
-	closeModal() {
-		this.setState({ isModalOpen: false });
-		console.log("2");
-	}
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./cardcareer.css";
 import ContactForm from "./ContactForm";
 import emailjs from "emailjs-com";
+import CForm from "./CForm";
 
 export default class CardCareer extends Component {
 	constructor(props) {
@@ -20,7 +21,7 @@ export default class CardCareer extends Component {
 			modal: false,
 		});
 	}
-
+	
  thanku() {
     alert("Thanku for submitting ");
   }
@@ -58,6 +59,7 @@ export default class CardCareer extends Component {
 							<button
 								className="btn"
 								onClick={(e) => this.modalOpen(e)}
+								
 							>
 								{" "}
 								Apply
@@ -135,7 +137,7 @@ export default class CardCareer extends Component {
 						</div>
 					</div>
 				</div>
-				<ContactForm
+				<CForm
 					show={this.state.modal}
 					handleClose={(e) => this.modalClose(e)}
 					position={`You Are Applying For The Post OF` + "  " + this.state.text}
@@ -143,7 +145,7 @@ export default class CardCareer extends Component {
 					
 
 					
-				</ContactForm>
+				</CForm>
 			</>
 		);
 	}

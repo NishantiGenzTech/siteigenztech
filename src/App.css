@@ -50,7 +50,7 @@
 	font-size: 13px;
 	display: inline-block;
 	text-transform: uppercase;
-	color: #404040;
+	color: #9ec2e5;
 	bottom: 188px;
 	background-color: transparent;
 	border: none;
@@ -242,7 +242,7 @@
 	font-size: 13px;
 	/* display: inline-block; */
 	text-transform: uppercase;
-	color: #404040;
+	color: #9ec2e5;
 	bottom: 0;
 	background-color: transparent;
 	border: none;
@@ -561,7 +561,7 @@ button {
     -webkit-align-self: center;
     margin-bottom: 0;
     line-height: 1;
-    font-style: italic;
+   
 }
 .cont-section .mbr-text {
     color: #767676;
@@ -574,7 +574,7 @@ button {
     word-wrap: break-word;
 }
 .display-2 {
-    font-family: 'Rubik', sans-serif;
+   
     font-size: 3rem;
 }
 
@@ -582,7 +582,7 @@ button {
     text-align: left;
 }
 	.display-5 {
-		font-family: 'Rubik', sans-serif;
+		
 		font-size: 1.5rem;
 	}
 	
