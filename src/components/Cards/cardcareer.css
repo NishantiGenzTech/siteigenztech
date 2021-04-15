@@ -14,22 +14,22 @@
 } */
 .course {
 	background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
-    /* display: flex; */
-    /* max-width: 100%; */
-    width: 100%;
-    display: inline-block;
-    margin: 20px;
-    overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+	/* display: flex; */
+	/* max-width: 100%; */
+	width: 100%;
+	display: inline-block;
+	margin: 20px;
+	overflow: hidden;
 }
 
 .course h6 {
 	opacity: 0.6;
-    margin: 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding-bottom: 10px;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding-bottom: 10px;
 }
 
 .course h2 {
@@ -38,12 +38,11 @@
 }
 
 .course-preview {
-	background-color:  #1965b1;
-    color: #fff;
-    padding: 30px;;
+	background-color: #1965b1;
 	color: #fff;
 	padding: 30px;
-	
+	color: #fff;
+	padding: 30px;
 }
 
 .course-preview a {
@@ -69,35 +68,31 @@
 	width: 150px;
 }
 
-
-
 .btn {
-    background-color: #9ac3ef;
-    border: 0;
-    border-radius: 50px;
-    box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
-    color: #fff;
-    font-size: 16px;
-    padding: 12px 25px;
-    bottom: 30px;
-    float: right;
-    right: 30px;
-    letter-spacing: 1px;
+	background-color: #9ac3ef;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	bottom: 30px;
+	float: right;
+	right: 30px;
+	letter-spacing: 1px;
 }
-.course-info h4{  
-    padding: 10px 0 10px 0;
-    font-size: 18px;
+.course-info h4 {
+	padding: 10px 0 10px 0;
+	font-size: 18px;
 }
-.courses-container{
+.courses-container {
 	width: 33%;
-    display: inline-block;
-    padding: 3% 3% 0 3%;
+	display: inline-block;
+	padding: 3% 3% 0 3%;
 }
-
-
-
 
 .modal {
+<<<<<<< HEAD
     background: rgba(0, 0, 0, 0.6);
     padding: 2% 28%;
   }
@@ -109,3 +104,22 @@
     top: 30%;
     padding: 20px;
   }
+=======
+	background: rgba(0, 0, 0, 0.6);
+}
+.modal-container {
+	position: absolute;
+	width: 25%;
+	background: #134372;
+	left: 38.4%;
+	top: 30%;
+	padding: 20px;
+}
+
+.popupheader {
+	padding-left: 8%;
+	color: white;
+    text-align: center;
+    text-decoration:underline;
+}
+>>>>>>> 34202f30c1c377d96f08f3201cebb67fbd893452

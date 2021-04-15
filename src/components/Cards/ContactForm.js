@@ -21,13 +21,16 @@ const ContactForm = ({ handleClose, show, children }) => {
 					console.log(error.text);
 				}
 			);
+<<<<<<< HEAD
 			
 			handleClose();
+=======
+		handleClose();
+>>>>>>> 34202f30c1c377d96f08f3201cebb67fbd893452
 	}
 	return (
 		<div className={showHideClassName}>
 			<div className="modal-container">
-				<h1></h1>
 				<a
 					href="javascript:;"
 					className="modal-close"
@@ -38,49 +41,40 @@ const ContactForm = ({ handleClose, show, children }) => {
 				</a>
 				{children}
 				<div class="row">
-						<div class="col-md-10 mx-auto">
-							<div class="myform form ">
-								<form
-									action=""
-									method="post"
-									onSubmit={sendEmail}
-									name="login"
-								>
-									<div class="form-group">
-										<input
-											type="text"
-											name="name"
-											
-											class="form-control my-input"
-											placeholder="Name"
-											
-										/>
-									</div>
-									<div class="form-group">
-										<input
-											type="text"
-											name="email"
-											
-											class="form-control my-input"
-											placeholder="Email"
-										/>
-									</div>
-									<div class="form-group">
-										<input
-											type="text"
-											
-											name="contact"
-											class="form-control my-input"
-											placeholder="Phone"
-										/>
-									</div>
-									<button  type="submit">
-										send
-									</button>
-								</form>
-							</div>
+					<div class="col-md-10 mx-auto">
+						<div class="myform form ">
+							<form action="" method="post" onSubmit={sendEmail} name="login">
+								<div class="form-group">
+									<input
+										type="text"
+										name="name"
+										class="form-control my-input"
+										placeholder="Name"
+									/>
+								</div>
+								<div class="form-group">
+									<input
+										type="text"
+										name="email"
+										class="form-control my-input"
+										placeholder="Email"
+									/>
+								</div>
+								<div class="form-group">
+									<input
+										type="text"
+										name="contact"
+										class="form-control my-input"
+										placeholder="Phone"
+									/>
+								</div>
+								<button type="submit">
+									Submit<i class="fa fa-paper-plane"></i>
+								</button>
+							</form>
 						</div>
 					</div>
+				</div>
 			</div>
 		</div>
 	);

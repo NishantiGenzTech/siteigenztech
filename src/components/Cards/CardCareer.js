@@ -20,6 +20,7 @@ export default class CardCareer extends Component {
 			modal: false,
 		});
 	}
+<<<<<<< HEAD
 
  thanku() {
     alert("Thanku for submitting ");
@@ -33,6 +34,59 @@ export default class CardCareer extends Component {
     })
   }
   
+=======
+	//  sendEmail = (e) => {
+	// 		e.preventDefault();
+	// 		emailjs
+	// 			.sendForm(
+	// 				"service_k66nlin",
+	// 				"template_waqpg06",
+	// 				e.target,
+	// 				"user_AxPlzgIo4G8UqVAGZredu"
+	// 			)
+	// 			.then(
+	// 				(result) => {
+	// 					console.log(result.text);
+	// 				},
+	// 				(error) => {
+	// 					console.log(error.text);
+	// 				}
+	// 			);
+	// 		this.modalClose();
+	// 	};
+	handleSubmit(e) {
+		e.preventDefault();
+		// const { name, email, contact, message } = this.state
+		// let templateParams = {
+		//   from_name: email,
+		//   to_name: '<YOUR_EMAIL_ID>',
+		//   subject: subject,
+		//   message_html: message,
+		//  }
+		emailjs.send(
+			"service_k66nlin",
+			"template_waqpg06",
+			e.target,
+			"user_AxPlzgIo4G8UqVAGZredu"
+		);
+		this.resetForm(e);
+		this.thanku();
+	}
+	thanku() {
+		alert("Thanku for submitting ");
+	}
+	resetForm() {
+		this.setState({
+			name: "",
+			email: "",
+			contact: "",
+			modal: false,
+		});
+	}
+	handleChange = (param, e) => {
+		this.setState({ [param]: e.target.value });
+	};
+>>>>>>> 34202f30c1c377d96f08f3201cebb67fbd893452
 	modalOpen() {
 		this.setState({ modal: true, text: "Python Developer" });
 	}
@@ -45,6 +99,18 @@ export default class CardCareer extends Component {
 		this.setState({ modal: true, text: "Java Developer" });
 	}
 
+<<<<<<< HEAD
+=======
+	// setText() {
+	// 	this.setState({ text });
+	// }
+
+	// changeText() {
+	// 	console.log("Hello From ChangeText");
+	// 	this.setState({});
+	// }
+
+>>>>>>> 34202f30c1c377d96f08f3201cebb67fbd893452
 	render() {
 		// var text1 = "";
 		return (
@@ -140,9 +206,15 @@ export default class CardCareer extends Component {
 					handleClose={(e) => this.modalClose(e)}
 					position={`You Are Applying For The Post OF` + "  " + this.state.text}
 				>
+<<<<<<< HEAD
 					
 
 					
+=======
+					<h2 className="popupheader">
+						{` Applying For ` + "  " + this.state.text}
+					</h2>
+>>>>>>> 34202f30c1c377d96f08f3201cebb67fbd893452
 				</ContactForm>
 			</>
 		);
