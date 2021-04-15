@@ -198,7 +198,9 @@ export default class CardCareer extends Component {
 					show={this.state.modal}
 					handleClose={(e) => this.modalClose(e)}
 				>
-					<h2>{`You Are Applying For The Post OF` + "  " + this.state.text}</h2>
+					<h2 className="popupheader">
+						{` Applying For ` + "  " + this.state.text}
+					</h2>
 				</ContactForm>
 			</>
 		);
