@@ -12,61 +12,15 @@ export default class CardCareer extends Component {
 			python: "Python Developer",
 			java: "Java Developer",
 			react: "React Developer",
-			text1: "j ",
 			modal: false,
-			name: "",
-			email: "",
-			contact: "",
-			modalInputName: "",
-			modalInputEmail: "",
-			modalInputNumber: "",
 		};
 	}
 	modalClose() {
 		this.setState({
-			modalInputName: "",
-			modalInputEmail: "",
-			modalInputNumber: "",
 			modal: false,
 		});
 	}
-//  sendEmail = (e) => {
-// 		e.preventDefault();
-// 		emailjs
-// 			.sendForm(
-// 				"service_k66nlin",
-// 				"template_waqpg06",
-// 				e.target,
-// 				"user_AxPlzgIo4G8UqVAGZredu"
-// 			)
-// 			.then(
-// 				(result) => {
-// 					console.log(result.text);
-// 				},
-// 				(error) => {
-// 					console.log(error.text);
-// 				}
-// 			);
-// 		this.modalClose();
-// 	};
-handleSubmit(e) {
-    e.preventDefault()
-    // const { name, email, contact, message } = this.state
-    // let templateParams = {
-    //   from_name: email,
-    //   to_name: '<YOUR_EMAIL_ID>',
-    //   subject: subject,
-    //   message_html: message,
-    //  }
-     emailjs.send(
-		"service_k66nlin",
-		"template_waqpg06",
-		e.target,
-		"user_AxPlzgIo4G8UqVAGZredu"
-     )
-     this.resetForm(e);
-	 this.thanku();
- }
+
  thanku() {
     alert("Thanku for submitting ");
   }
@@ -78,9 +32,7 @@ handleSubmit(e) {
 	  modal: false,
     })
   }
-  handleChange = (param, e) => {
-    this.setState({ [param]: e.target.value })
-  }
+  
 	modalOpen() {
 		this.setState({ modal: true, text: "Python Developer" });
 	}
@@ -93,16 +45,6 @@ handleSubmit(e) {
 		this.setState({ modal: true, text: "Java Developer" });
 	}
 
-	// setText() {
-	// 	this.setState({ text });
-	// }
-
-	// changeText() {
-	// 	console.log("Hello From ChangeText");
-	// 	this.setState({});
-	// }
-
-	
 	render() {
 		// var text1 = "";
 		return (
@@ -115,8 +57,6 @@ handleSubmit(e) {
 
 							<button
 								className="btn"
-								// text={PythonDeveloper}
-								// onClick={(e) => this.changeText(e)}
 								onClick={(e) => this.modalOpen(e)}
 							>
 								{" "}
@@ -198,8 +138,9 @@ handleSubmit(e) {
 				<ContactForm
 					show={this.state.modal}
 					handleClose={(e) => this.modalClose(e)}
+					position={`You Are Applying For The Post OF` + "  " + this.state.text}
 				>
-					<h2>{`You Are Applying For The Post OF` + "  " + this.state.text}</h2>
+					
 
 					
 				</ContactForm>

@@ -1,76 +1,112 @@
-import React, { useState } from "react";
+import React,{Component} from 'react'
 import "../../App.css";
-import { Modal } from "../Cards/Modal";
+import CForm from "../Cards/CForm";
 
-export default function ContactUs() {
-	const [show, setShow] = useState(false);
 
-	const closeModalHandler = () => setShow(false);
-	console.log(show);
+export default class ContactUs extends Component {
+	
+	constructor(props) {
+		super(props);
+		
+		this.state = {
+			modal: false,
+		};
+	  }
+	  modalOpen(e) {
+		this.setState({ modal: true, });
+		console.log('model open')
+	}
+	modalClose(e) {
+		this.setState({
+			modal: false,
+		});
+	}
+	
+	render(){
 	return (
-		<div className="body-content">
-			<form action="#" onsubmit="showAddress(this.address.value); return false">
-				<div className="content">
-					<div className="col-md-6 the-map">
-						<div className=" mapouter">
-							<iframe
-								width="700"
-								height="375"
-								id="gmap_canvas"
-								src="https://maps.google.com/maps?q=4th%20Cross,%202nd%20main,%20Hongasandra%20,%20Bommanahalli%20,%20Bangalore&t=&z=19&ie=UTF8&iwloc=&output=embed"
-								scrolling="no"
-							></iframe>
-							<a href="https://embedgooglemap.net/maps/15"> </a>
-							<a href="https://www.embedgooglemap.net"> </a>
-							<Modal show={show} close={closeModalHandler} />
-						</div>
+		<section className="cont-section" >
+        <div className="container">
+            <div className="row">
+                <div className="col-md-6">
+                    <div className="google-map"><div className=" mapouter">
+					<iframe
+						width="700"
+						height="375"
+						id="gmap_canvas"
+						src="https://maps.google.com/maps?q=4th%20Cross,%202nd%20main,%20Hongasandra%20,%20Bommanahalli%20,%20Bangalore&t=&z=19&ie=UTF8&iwloc=&output=embed"
+						scrolling="no"
+					></iframe>
+					<a href="https://embedgooglemap.net/maps/15"> </a>
+					<a href="https://www.embedgooglemap.net"> </a>
+					
+				</div></div>
+                </div>
+                <div className="col-md-6 colsec">
+                    
+                    <div>
+                        <div className="icon-block pb-3">
+                            <span className="icon-block__icon">
+                                <span className="mbri-letter mbr-iconfont" media-simple="true" />
+                            </span>
+                            <h4 className="icon-block__title align-left mbr-fonts-style display-5">
+							You can reach out to us via one of the below channels
+                            </h4>
+                        </div>
+                        <div className="icon-contacts pb-3">
+						<img src="https://clientdemozone.com/suyash/wp-content/uploads/2020/09/address.png" class="scale-with-grid" alt="" width="" height=""></img>
+                            <h5 className="align-left mbr-fonts-style display-7">
+							2nd main 4th cross, Bangalore: 560068
+							Karnataka, IN
+							
+                            </h5>
+                           
+                        </div>
+						<div className="icon-contacts pb-3">
+						<img src="https://clientdemozone.com/suyash/wp-content/uploads/2020/09/call-us-1.png" class="scale-with-grid" alt="" width="" height=""></img>
+                            <h5 className="align-left mbr-fonts-style display-7">
+							info@igenztech.com
+                            </h5>
+                           
+                        </div>
+						<div className="icon-contacts pb-3">
+						<img src="https://clientdemozone.com/suyash/wp-content/uploads/2020/09/email.png" class="scale-with-grid" alt="" width="" height=""></img>
+                            <h5 className="align-left mbr-fonts-style display-7">
+							1800 000 12345
+                            </h5>
+                           
+                        </div>
+                    </div>
+                    <div data-form-type="formoid">
+                        <div data-form-alert="" hidden="">
+						<div className="call">
+						<p> Or use our &nbsp;&nbsp; </p>
+						<input
+						onClick={(e) => this.modalOpen(e)}
+							className="btn-openModal inputlink"
+							type="button"
+							value="contact form"
+						/>
+						<p> &nbsp;&nbsp; to place your request</p>
 					</div>
-					<div class="col-md-6 centereds">
-						<div className="textfield">
-							<div className="centered centeredmob">
-								<div className="textheader">
-									<h6>You can reach out to us via one of the below channels</h6>
-								</div>
-								<br />
-								<div className="iconalign">
-									<i className="fas fa-map-marker-alt "> </i>
-									&nbsp;&nbsp;&nbsp;
-									<p className="paragraph">
-										2 nd main 4 th cross,
-										<br /> Bangalore: 560068
-										<br /> Karnataka, IN
-									</p>
-								</div>
-								<br />
-								<div className="iconalign">
-									<i className="fas fa-envelope-open-text "> </i>
-									&nbsp;&nbsp;&nbsp;
-									<p className="paragraph"> info @igenztech.com </p>
-								</div>
-								<br />
-								<div className="iconalign">
-									<i className="fas fa-headset "> </i>
-									&nbsp;&nbsp;&nbsp;
-									<p className="paragraph"> 1800 000 12345 </p>
-								</div>
-								<br />
-								<div className="call">
-									<p> Or use our &nbsp;&nbsp; </p>
-									<input
-										onClick={() => setShow(true)}
-										className="btn-openModal inputlink"
-										type="button"
-										value="contact form"
-									/>
-									<p> &nbsp;&nbsp; to place your request</p>
-								</div>
-							</div>
-						</div>{" "}
-						{/* <Modal show={show} close={closeModalHandler} /> */}
-						<p id="error-msg"></p>
-					</div>
-				</div>
-			</form>
-		</div>
+                        </div>
+                        
+                    </div>
+                </div>
+				
+            </div>
+        </div>
+		<CForm show={this.state.modal}
+				handleClose={(e) => this.modalClose(e)}></CForm>
+    </section>
 	);
+	}
+	openModal() {
+		this.setState({ isModalOpen: true });
+		console.log("1");
+	}
+
+	closeModal() {
+		this.setState({ isModalOpen: false });
+		console.log("2");
+	}
 }

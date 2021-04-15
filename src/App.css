@@ -29,7 +29,7 @@
 	background: inherit;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	height: 100vh;
+	height: 81vh;
 	width: 100%;
 	background-attachment: fixed;
 }
@@ -426,7 +426,7 @@ ul.a {
 .mapouter {
 	position: relative;
 	text-align: right;
-	/* height: 500px; */
+
 	display: inline-flex;
 	width: 100%;
 }
@@ -497,11 +497,7 @@ button {
 #error-msg {
 	color: #c50707;
 }
-.col-md-6 {
-	width: 50%;
-	display: inline-block;
-	padding: 8% 0 0 4%;
-}
+
 .call {
 	margin-left: 0;
 	font-size: 24px !important;
@@ -531,6 +527,78 @@ button {
 	width: 124px;
 	margin-left: 3%;
 }
+.cont-section{
+	padding-top: 10%;
+    /* padding-bottom: 90px;
+    background-color: #ffffff; */
+}
+.cont-section .google-map {
+    height: 25rem;
+    position: relative;
+}
+.cont-section .google-map iframe {
+   
+    width: 100%;
+}
+.cont-section .icon-block {
+    margin-bottom: 10px;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.cont-section .icon-block .icon-block__icon {
+    display: inline-block;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+}
+.cont-section .mbr-iconfont {
+    font-size: 48px;
+    padding-right: 1rem;
+}
+.cont-section .icon-block .icon-block__title {
+    display: inline-block;
+    align-self: center;
+    -webkit-align-self: center;
+    margin-bottom: 0;
+    line-height: 1;
+    font-style: italic;
+}
+.cont-section .mbr-text {
+    color: #767676;
+}
+.colsec{
+	padding: 0% 5%;
+}
+.container, .container-fluid {
+    position: relative;
+    word-wrap: break-word;
+}
+.display-2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+}
+
+.align-left {
+    text-align: left;
+}
+	.display-5 {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1.5rem;
+	}
+	
+	.align-left {
+		text-align: left;
+	}
+	.display-7 {
+	
+    font-size: 1rem;
+    display: inline-block;
+    padding-left: 6%;
+	}
+	.mbr-text {
+		font-style: normal;
+    line-height: 1.6;
+	} 
 /* Responsive columns */
 @media screen and (max-width: 900px) {
 	.columns {
@@ -569,9 +637,7 @@ button {
 		font-weight: normal;
 		padding-left: 0;
 	}
-	.col-md-6 {
-		font-size: -webkit-xxx-large;
-	}
+	
 	.centered p {
 		font-size: 22px;
 		font-weight: normal;

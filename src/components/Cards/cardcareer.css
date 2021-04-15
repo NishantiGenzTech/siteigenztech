@@ -99,6 +99,7 @@
 
 .modal {
     background: rgba(0, 0, 0, 0.6);
+    padding: 2% 28%;
   }
   .modal-container {
     position: absolute;

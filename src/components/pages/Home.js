@@ -43,9 +43,7 @@ export default function Home() {
 						<rect x="0" y="0" />
 					</svg>
 					<div className="scroll-down__content">Click to scroll</div>
-					<svg className="scroll-down__arrow-down" viewBox="0 0 25 30">
-						<path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
-					</svg>
+					<i class="fas fa-long-arrow-alt-down fa-2x"></i>
 				</button>
 			</div>
 			<div id="target" className="full-width wildcard">
@@ -86,14 +84,7 @@ export default function Home() {
 					<rect x="0" y="0" />
 				</svg>
 
-				<svg
-					viewBox="0 0 32 32"
-					class="icon icon-arrow-top"
-					viewBox="0 0 32 32"
-					aria-hidden="true"
-				>
-					<path d="M17.504 26.025l.001-14.287 6.366 6.367L26 15.979 15.997 5.975 6 15.971 8.129 18.1l6.366-6.368v14.291z" />
-				</svg>
+				<i class="fas fa-long-arrow-alt-up fa-2x"></i>
 				<div className="scroll-down__content">Click to Top</div>
 			</button>
 		</>

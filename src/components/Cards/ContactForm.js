@@ -21,6 +21,7 @@ const ContactForm = ({ handleClose, show, children }) => {
 					console.log(error.text);
 				}
 			);
+			
 			handleClose();
 	}
 	return (
