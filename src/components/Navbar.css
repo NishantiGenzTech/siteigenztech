@@ -14,7 +14,7 @@
 	justify-self: start;
 	/* margin-left: 16px; */
 	cursor: pointer;
-	width: 5%;
+	width: 8%;
 	display: inherit;
 	text-decoration: none;
 	background-color: transparent !important;
@@ -31,7 +31,7 @@
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
-	width: 95%;
+	width: 92%;
 	justify-content: end;
 	margin-right: 2rem;
 }
@@ -71,7 +71,7 @@
 .active {
 	text-decoration: underline;
 	color: white;
-    background-color: #4689c0;
+	background-color: #4689c0;
 }
 @media screen and (max-width: 960px) {
 	.NavbarItems {

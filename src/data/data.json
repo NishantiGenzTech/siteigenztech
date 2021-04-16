@@ -17,7 +17,7 @@
 		{
 			"src": "../images/pexels-belle-co-1000445.jpg",
 			"paragraph1": "Economists say the next 10 years could become the most important in India’s economic history, because if everything goes according to plan, India will be able to reap the fruits of its favourable demography over 2030s and 2040s before she loses that edge in the 2050s.",
-			"paragraph2": "We at iGenZ Technologies believe that the economic growth story of our country will be fueled by Generation Z. We aim to bridge the gap between the skill availability and needs. This is precisely the reason we call ourselves iGenZ which stands for innovation for and by Generation Z.."
+			"paragraph2": "We at iGenZ Technologies believe that the economic growth story of our country will be fueled by GenerationZ. We aim to bridge the gap between the skill availability and needs. This is precisely the reason we call ourselves iGenZ which stands for innovation for and by GenerationZ.."
 		},
 		{
 			"src": "../images/pexels-kaboompics-com-6375.jpg",
@@ -72,30 +72,6 @@
 	],
 
 	"Careers": [
-		{
-			"position": "Python Developer",
-			"opening": "FRESHER PREFERRED!",
-			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn Python quickly",
-			"Success": "Thank you For Applying . We will Get Back To You Shortly",
-			"Commontext": "Education:B.E, B.Tech (CS or Electronics)* preferred.",
-			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
-		},
-		{
-			"position": "React Developer",
-			"opening": "FRESHER PREFERRED!",
-			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn React quickly",
-			"Success": "Thank you For Applying . We will Get Back To You Shortly",
-			"Commontext": "Education:B.E, B.Tech (CS or Electronics)* preferred.",
-			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
-		},
-		{
-			"position": "Java Developer",
-			"opening": "FRESHER PREFERRED!",
-			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn Java quickly",
-			"Success": "Thank you For Applying . We will Get Back To You Shortly",
-			"Commontext": "Education:B.E, B.Tech (CS or Electronics)* preferred.",
-			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
-		},
 		{
 			"position": "Python Developer",
 			"opening": "FRESHER PREFERRED!",
