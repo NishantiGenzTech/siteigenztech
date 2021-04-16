@@ -3,20 +3,16 @@ import "../../App.css";
 import homeimg from "../../images/pexels-belle-co-1000445.jpg";
 import homeimg2 from "../../images/pexels-kaboompics-com-6375.jpg";
 import homeimg1 from "../../images/pexels-pixabay-355952.jpg";
-
+import data from '../../data/data.json'
 export default function Home() {
 	return (
 		<>
 			<div className="wildcard">
-				<img className="images" src={homeimg} alt="Home Images"></img>
+				<img className="images" src={data.Home[0].src} alt="Home Images"></img>
 				<div className="box">
 					<div>
 						<p className="igenz">
-							Economists say the next 10 years could become the most important
-							in India’s economic history, because if everything goes according
-							to plan, India will be able to reap the fruits of its favourable
-							demography over 2030s and 2040s before she loses that edge in the
-							2050s.
+							{data.Home[0].paragraph1}
 						</p>
 
 						<p style={{ textAlign: "right" }}>
@@ -26,11 +22,7 @@ export default function Home() {
 						</p>
 
 						<p className=" info">
-							We at iGenZ Technologies believe that the economic growth story of
-							our country will be fueled by Generation Z. We aim to bridge the
-							gap between the skill availability and needs. This is precisely
-							the reason we call ourselves iGenZ which stands for innovation for
-							and by Generation Z.
+							{data.Home[0].paragraph2}
 						</p>
 					</div>
 				</div>
@@ -47,29 +39,20 @@ export default function Home() {
 				</button>
 			</div>
 			<div id="target" className="full-width wildcard">
-				<img className="images2home" src={homeimg2} alt="Home Images"></img>
+				<img className="images2home" src={data.Home[1].src} alt="Home Images"></img>
 				<div className="home2text">
 					<div>
 						<p className="igenz">
-							We help you manage business cyclicality, spikes in demand and
-							setup scale. Our staffing solutions business can cater to niche
-							expertise and technological skills to meet your staffing
-							requirements. Once you identify the expertise and task at hand, we
-							can offer you customized solutions to meet your workforce
-							requirements through innovative models. Towards this, we offer
-							experts with technical and functional domain skills.
+							{data.Home[1].paragraph1}
 						</p>
 					</div>
 				</div>
 
 				<div className="wildcard">
-					<img className="home2Images" src={homeimg1} alt="Home Images"></img>
+					<img className="home2Images" src={data.Home[2].src} alt="Home Images"></img>
 					<div className="texthome2">
 						<p className="igenz">
-							Being part of various recruitment drives and hiring initiatives,
-							we have always felt the need for a product in the market that can
-							cut short the entire hiring process and make the process efficient
-							with the use of technology.
+							{data.Home[2].paragraph1}
 						</p>
 					</div>
 				</div>

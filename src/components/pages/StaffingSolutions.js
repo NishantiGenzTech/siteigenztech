@@ -1,52 +1,29 @@
-import React from 'react';
+import React from "react";
 import homeimg from "../../images/pexels-jeshootscom-1040157.jpg";
+import data from "../../data/data.json";
 
 export default function StaffingSolutions() {
-  
-  return (
-    <>
-     
-      <div className="wildcard">
-      <img className="images" src={homeimg} alt="Home Images"></img>
-        <div className="box">
-          <div className="igenz">
-            <p>
-                <i>
-                We help you manage business cyclicality,
-                 spikes in demand and setup scale. 
-                 Our staffing solutions business can cater
-                  to niche expertise and technological skills
-                   to meet your staffing requirements. 
-                   Once you identify the expertise and task at hand,
-                    we can offer you customized solutions to meet 
-                    your workforce requirements through innovative models.
-                     Towards this, we offer experts with technical and 
-                     functional domain skills.
+	return (
+		<>
+			<div className="wildcard">
+				<img className="images" src={homeimg} alt="Home Images"></img>
+				<div className="box">
+					<div className="igenz">
+						<p>
+							<i>{data.Staffing[0].paragraph}</i>
+						</p>
 
-                 
-                </i>
-              </p>
-              
-              <p>We offer staffing for the following functions</p>
-              <p className="igenz">
-                   <ul className='a'>
-                    <li>Information Technology services
-                    </li>
-                    <li>Engineering Services
-                    </li>
-                    <li>Sales & Marketing
-                    </li>
-                    <li>Financial Services
-                    </li>
-                    <li>Program & Project Management
-                    </li>
-                   </ul>
-            </p>
-          </div>
-      </div>
-      </div>
-
-    
-    </>
-  );
+						<p>{data.Staffing[0].paragraph1}</p>
+						<p className="igenz">
+							<ul className="a">
+                {data.Staffing[0].list.map(x=>
+								<li>{x}</li>
+                )}
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 }

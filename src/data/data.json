@@ -1,122 +1,240 @@
 {
-    "Header": {
+	"Header": [
+		{
+			"title": "Products",
+			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+		},
+		{
+			"title": "Careers",
+			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+		},
+		{
+			"title": "Contact Us",
+			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+		}
+	],
+	"Home": [
+		{
+			"src": "../images/pexels-belle-co-1000445.jpg",
+			"paragraph1": "Economists say the next 10 years could become the most important in India’s economic history, because if everything goes according to plan, India will be able to reap the fruits of its favourable demography over 2030s and 2040s before she loses that edge in the 2050s.",
+			"paragraph2": "We at iGenZ Technologies believe that the economic growth story of our country will be fueled by Generation Z. We aim to bridge the gap between the skill availability and needs. This is precisely the reason we call ourselves iGenZ which stands for innovation for and by Generation Z.."
+		},
+		{
+			"src": "../images/pexels-kaboompics-com-6375.jpg",
+			"paragraph1": "We help you manage business cyclicality, spikes in demand and setup scale. Our staffing solutions business can cater to niche expertise and technological skills to meet your staffing requirements. Once you identify the expertise and task at hand, we can offer you customized solutions to meet your workforce requirements through innovative models. Towards this, we offer experts with technical and functional domain skills.",
+			"paragraph2": ""
+		},
+		{
+			"src": "../images/pexels-pixabay-355952.jpg",
+			"paragraph1": "Being part of various recruitment drives and hiring initiatives, we have always felt the need for a product in the market that can cut short the entire hiring process and make the process efficient with the use of technology."
+		}
+	],
 
-        "title": "We are a Landing Page",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+	"Staffing": [
+		{
+			"paragraph": "We help you manage business cyclicality, spikes in demand and setup scale. Our staffing solutions business can cater to niche expertise and technological skills to meet your staffing requirements. Once you identify the expertise and task at hand, we can offer you customized solutions to meet your workforce requirements through innovative models. Towards this, we offer experts with technical and functional domain skills.",
+			"paragraph1": "We offer staffing for the following functions",
+			"list": [
+				"Information Technology services",
+				"Engineering Services",
+				"Sales & Marketing",
+				"Financial Services",
+				"Program & Project Management"
+			]
+		}
+	],
 
-    },
-   
-    "Services": [{
-            "icon": "fa fa-wordpress",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-        },
-        {
-            "icon": "fa fa-cart-arrow-down",
-            "name": "Consectetur adipiscing",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-        },
-        {
-            "icon": "fa fa-cloud-download",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-        },
-        {
-            "icon": "fa fa-language",
-            "name": "Consectetur adipiscing",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-        },
-        {
-            "icon": "fa fa-plane",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-        },
-        {
-            "icon": "fa fa-pie-chart",
-            "name": "Consectetur adipiscing",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-        }
+	"Aihiring": [
+		{
+			"paragraph1": "Being part of various recruitment drives and hiring initiatives, we have always felt the need for a product in the market that can cut short the entire hiring process and make the process efficient with the use of technology.",
+			"paragraph2": "With our AI powered hiring capability, recruiters can cut down their recruiting costs and time by nearly half. Our hiring tool evaluates and ranks candidates on a host of customized parameters to avoid bias and bring in improved accuracy",
+			"image": [
+				{ "src": "../../images/paper.png", "text": "" },
+				{ "src": "../../images/Aibas.png", "text": "AI Based Candidate" },
+				{
+					"src": "../../images/Candidatesranking.png",
+					"text": "Filtering Candidate"
+				},
+				{
+					"src": "../../images/Predictivematching.png",
+					"text": "Ranking Predictive"
+				},
+				{ "src": "../../images/Quick.png", "text": "Matching Quick Hiring" }
+			],
+			"text": [
+				"",
+				"AI Based Candidate Filtering",
+				"Candidate Ranking",
+				"Predictive Matching",
+				"Quick Hiring"
+			]
+		}
+	],
 
-
-    ],
-    "Testimonials": [{
-            "img": "img/testimonials/01.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "John Doe"
-        },
-        {
-            "img": "img/testimonials/02.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Johnathan Doe"
-        },
-        {
-            "img": "img/testimonials/03.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "John Doe"
-        },
-        {
-            "img": "img/testimonials/04.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Johnathan Doe"
-        },
-        {
-            "img": "img/testimonials/05.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "John Doe"
-        },
-        {
-            "img": "img/testimonials/06.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Johnathan Doe"
-        }
-    ],
-    "Team": [{
-            "img": "img/team/01.jpg",
-            "name": "John Doe",
-            "job": "Director"
-        },
-        {
-            "img": "img/team/02.jpg",
-            "name": "Mike Doe",
-            "job": "Senior Designer"
-        }, {
-            "img": "img/team/03.jpg",
-            "name": "Jane Doe",
-            "job": "Senior Designer"
-        },
-        {
-            "img": "img/team/04.jpg",
-            "name": "Karen Doe",
-            "job": "Project Manager"
-        }
-    ],
-    "Contact": {
-        "address": "4321 California St, San Francisco, CA 12345 ",
-        "phone": "+1 123 456 1234",
-        "email": "info@company.com",
-        "facebook": "fb.com",
-        "twitter": "twitter.com",
-        "youtube": "youtube.com"
-    },
-    "Features": [{
-            "icon": "fa fa-comments-o",
-            "title": "Lorem ipsum",
-            "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-        },
-        {
-            "icon": "fa fa-bullhorn",
-            "title": "Lorem ipsum",
-            "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-        },
-        {
-            "icon": "fa fa-group",
-            "title": "Lorem ipsum",
-            "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-        },
-        {
-            "icon": "fa fa-magic",
-            "title": "Lorem ipsum",
-            "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-        }
-    ]
+	"Careers": [
+		{
+			"position": "Python Developer",
+			"opening": "FRESHER PREFERRED!",
+			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn Python quickly",
+			"Success": "Thank you For Applying . We will Get Back To You Shortly",
+			"Commontext": "Education:B.E, B.Tech (CS or Electronics)* preferred.",
+			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
+		},
+		{
+			"position": "React Developer",
+			"opening": "FRESHER PREFERRED!",
+			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn React quickly",
+			"Success": "Thank you For Applying . We will Get Back To You Shortly",
+			"Commontext": "Education:B.E, B.Tech (CS or Electronics)* preferred.",
+			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
+		},
+		{
+			"position": "Java Developer",
+			"opening": "FRESHER PREFERRED!",
+			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn Java quickly",
+			"Success": "Thank you For Applying . We will Get Back To You Shortly",
+			"Commontext": "Education:B.E, B.Tech (CS or Electronics)* preferred.",
+			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
+		},
+		{
+			"position": "Python Developer",
+			"opening": "FRESHER PREFERRED!",
+			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn Python quickly",
+			"Success": "Thank you For Applying . We will Get Back To You Shortly",
+			"Commontext": "Education:B.E, B.Tech (CS or Electronics)* preferred.",
+			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
+		},
+		{
+			"position": "React Developer",
+			"opening": "FRESHER PREFERRED!",
+			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn React quickly",
+			"Success": "Thank you For Applying . We will Get Back To You Shortly",
+			"Commontext": "Education:B.E, B.Tech (CS or Electronics)* preferred.",
+			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
+		},
+		{
+			"position": "Java Developer",
+			"opening": "FRESHER PREFERRED!",
+			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn Java quickly",
+			"Success": "Thank you For Applying . We will Get Back To You Shortly",
+			"Commontext": "Education:B.E, B.Tech (CS or Electronics)* preferred.",
+			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
+		}
+	],
+	"Services": [
+		{
+			"icon": "fa fa-wordpress",
+			"name": "Lorem ipsum dolor",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+		},
+		{
+			"icon": "fa fa-cart-arrow-down",
+			"name": "Consectetur adipiscing",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+		},
+		{
+			"icon": "fa fa-cloud-download",
+			"name": "Lorem ipsum dolor",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+		},
+		{
+			"icon": "fa fa-language",
+			"name": "Consectetur adipiscing",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+		},
+		{
+			"icon": "fa fa-plane",
+			"name": "Lorem ipsum dolor",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+		},
+		{
+			"icon": "fa fa-pie-chart",
+			"name": "Consectetur adipiscing",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+		}
+	],
+	"Testimonials": [
+		{
+			"img": "img/testimonials/01.jpg",
+			"text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+			"name": "John Doe"
+		},
+		{
+			"img": "img/testimonials/02.jpg",
+			"text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+			"name": "Johnathan Doe"
+		},
+		{
+			"img": "img/testimonials/03.jpg",
+			"text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+			"name": "John Doe"
+		},
+		{
+			"img": "img/testimonials/04.jpg",
+			"text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+			"name": "Johnathan Doe"
+		},
+		{
+			"img": "img/testimonials/05.jpg",
+			"text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+			"name": "John Doe"
+		},
+		{
+			"img": "img/testimonials/06.jpg",
+			"text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+			"name": "Johnathan Doe"
+		}
+	],
+	"Team": [
+		{
+			"img": "img/team/01.jpg",
+			"name": "John Doe",
+			"job": "Director"
+		},
+		{
+			"img": "img/team/02.jpg",
+			"name": "Mike Doe",
+			"job": "Senior Designer"
+		},
+		{
+			"img": "img/team/03.jpg",
+			"name": "Jane Doe",
+			"job": "Senior Designer"
+		},
+		{
+			"img": "img/team/04.jpg",
+			"name": "Karen Doe",
+			"job": "Project Manager"
+		}
+	],
+	"Contact": {
+		"address": "4321 California St, San Francisco, CA 12345 ",
+		"phone": "+1 123 456 1234",
+		"email": "info@company.com",
+		"facebook": "fb.com",
+		"twitter": "twitter.com",
+		"youtube": "youtube.com"
+	},
+	"Features": [
+		{
+			"icon": "fa fa-comments-o",
+			"title": "Lorem ipsum",
+			"text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+		},
+		{
+			"icon": "fa fa-bullhorn",
+			"title": "Lorem ipsum",
+			"text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+		},
+		{
+			"icon": "fa fa-group",
+			"title": "Lorem ipsum",
+			"text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+		},
+		{
+			"icon": "fa fa-magic",
+			"title": "Lorem ipsum",
+			"text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+		}
+	]
 }
