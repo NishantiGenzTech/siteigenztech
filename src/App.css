@@ -393,10 +393,9 @@ ul.a {
 	font-size: 1rem;
 	align-items: center;
 	justify-content: center;
-	height: auto;
+	height: 100vh;
 	padding: 3%;
 	width: 100%;
-	
 }
 .body-content {
 	display: block;
@@ -527,78 +526,74 @@ button {
 	width: 124px;
 	margin-left: 3%;
 }
-.cont-section{
+.cont-section {
 	padding-top: 10%;
-    /* padding-bottom: 90px;
+	/* padding-bottom: 90px;
     background-color: #ffffff; */
 }
 .cont-section .google-map {
-    height: 25rem;
-    position: relative;
+	height: 25rem;
+	position: relative;
 }
 .cont-section .google-map iframe {
-   
-    width: 100%;
+	width: 100%;
 }
 .cont-section .icon-block {
-    margin-bottom: 10px;
-    display: -webkit-flex;
-    align-items: center;
-    -webkit-align-items: center;
+	margin-bottom: 10px;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
 }
 .cont-section .icon-block .icon-block__icon {
-    display: inline-block;
-    flex-shrink: 0;
-    -webkit-flex-shrink: 0;
+	display: inline-block;
+	flex-shrink: 0;
+	-webkit-flex-shrink: 0;
 }
 .cont-section .mbr-iconfont {
-    font-size: 48px;
-    padding-right: 1rem;
+	font-size: 48px;
+	padding-right: 1rem;
 }
 .cont-section .icon-block .icon-block__title {
-    display: inline-block;
-    align-self: center;
-    -webkit-align-self: center;
-    margin-bottom: 0;
-    line-height: 1;
-   
+	display: inline-block;
+	align-self: center;
+	-webkit-align-self: center;
+	margin-bottom: 0;
+	line-height: 1;
 }
 .cont-section .mbr-text {
-    color: #767676;
+	color: #767676;
 }
-.colsec{
+.colsec {
 	padding: 0% 5%;
 }
-.container, .container-fluid {
-    position: relative;
-    word-wrap: break-word;
+.container,
+.container-fluid {
+	position: relative;
+	word-wrap: break-word;
 }
 .display-2 {
-   
-    font-size: 3rem;
+	font-size: 3rem;
 }
 
 .align-left {
-    text-align: left;
+	text-align: left;
 }
-	.display-5 {
-		
-		font-size: 1.5rem;
-	}
-	
-	.align-left {
-		text-align: left;
-	}
-	.display-7 {
-	
-    font-size: 1rem;
-    display: inline-block;
-    padding-left: 6%;
-	}
-	.mbr-text {
-		font-style: normal;
-    line-height: 1.6;
-	} 
+.display-5 {
+	font-size: 1.5rem;
+}
+
+.align-left {
+	text-align: left;
+}
+.display-7 {
+	font-size: 1rem;
+	display: inline-block;
+	padding-left: 6%;
+}
+.mbr-text {
+	font-style: normal;
+	line-height: 1.6;
+}
 /* Responsive columns */
 @media screen and (max-width: 900px) {
 	.columns {
@@ -637,7 +632,7 @@ button {
 		font-weight: normal;
 		padding-left: 0;
 	}
-	
+
 	.centered p {
 		font-size: 22px;
 		font-weight: normal;
@@ -755,4 +750,7 @@ button {
 	padding-top: 2%;
 }
 
-
+.footer {
+	text-align: center;
+	font-weight: bold;
+}

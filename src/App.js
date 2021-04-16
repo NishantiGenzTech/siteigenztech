@@ -9,6 +9,7 @@ import ContactUs from "./components/pages/ContactUs";
 // import JsonData from './data/data.json'
 import StaffingSolutions from "./components/pages/StaffingSolutions";
 import AIHiring from "./components/pages/AIHiring";
+import Footer from "./components/pages/Footer";
 
 function App() {
 	// const [landingPageData, setLandingPageData] = useState({})
@@ -22,12 +23,13 @@ function App() {
 					<Navbar />
 					<Switch>
 						<Route path="/" exact component={Home} />
-						
+
 						<Route path="/Careers" component={Careers} />
 						<Route path="/contact-us" component={ContactUs} />
 						<Route path="/StaffingSolutions" component={StaffingSolutions} />
 						<Route path="/AIHiring" component={AIHiring} />
 					</Switch>
+					<Footer />
 				</div>
 			</Router>
 		</div>
