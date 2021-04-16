@@ -1,7 +1,27 @@
 import React from "react";
 import "./cfile.css";
+import emailjs from "emailjs-com";
 
 export default function CForm({ handleClose, show, children, position, text }) {
+	function sendEmail(e) {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				"service_k66nlin",
+				"template_waqpg06",
+				e.target,
+				"user_AxPlzgIo4G8UqVAGZredu"
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+	}
 	const showHideClassName = show ? "modal d-block" : "modal d-none";
 	console.log(text);
 	return (
@@ -45,7 +65,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					</div>
 				)}
 
-				<form className="login100-form validate-form">
+				<form className="login100-form validate-form" onSubmit={sendEmail}>
 					<div className="wrap-input100 validate-input m-b-26">
 						<span className="label-input100">Full Name</span>
 						<input
