@@ -102,15 +102,15 @@ input[type="text"] {
 	transition: all 1.3s;
 	width: 100%;
 }
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
 	.modal-wrapper {
 		background: #fff;
 		width: 100%;
 		max-width: 800px;
-		/* margin: 4rem auto; */
+		
 		top: 0;
 		margin-top: -146%;
 		margin-left: -58%;
 		transition: all 0.5s ease;
 	}
-}
+} */
