@@ -12,10 +12,6 @@ import AIHiring from "./components/pages/AIHiring";
 import Footer from "./components/pages/Footer";
 
 function App() {
-	// const [landingPageData, setLandingPageData] = useState({})
-	// useEffect(() => {
-	//   setLandingPageData(JsonData)
-	// }, [])
 	return (
 		<div className="app">
 			<Router>
@@ -23,7 +19,6 @@ function App() {
 					<Navbar />
 					<Switch>
 						<Route path="/" exact component={Home} />
-
 						<Route path="/Careers" component={Careers} />
 						<Route path="/contact-us" component={ContactUs} />
 						<Route path="/StaffingSolutions" component={StaffingSolutions} />
