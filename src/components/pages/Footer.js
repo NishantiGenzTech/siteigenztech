@@ -5,7 +5,8 @@ const Footer = () => {
 		<div className="footer">
 			<footer>
 				{" "}
-				&copy; Copyright 2021, IGENZ TECHNOLOGY PVT LTD,BENGALURU{" "}
+				&copy; Copyright 2021, IGENZ TECHNOLOGY PVT LTD,BENGALURU <br/>All Rights
+				Reserved{" "}
 			</footer>
 		</div>
 	);

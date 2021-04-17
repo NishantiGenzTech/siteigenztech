@@ -67,23 +67,29 @@ export default function CForm({ handleClose, show, children, position, text }) {
 
 				<form className="login100-form validate-form" onSubmit={sendEmail}>
 					<div className="wrap-input100 validate-input m-b-26">
-						<span className="label-input100">Full Name</span>
+						<span className="label-input100">
+							Full Name<span className="red"> *</span>
+						</span>
 						<input
 							className="input100"
 							type="text"
 							name="username"
 							placeholder="Enter username"
+							required
 						/>
 						<span className="focus-input100"></span>
 					</div>
 
 					<div className="wrap-input100 validate-input m-b-26">
-						<span className="label-input100">Email</span>
+						<span className="label-input100">
+							Email<span className="red"> *</span>
+						</span>
 						<input
 							className="input100"
 							type="text"
 							name="Email"
 							placeholder="Enter Email"
+							required
 						/>
 						<span className="focus-input100"></span>
 					</div>

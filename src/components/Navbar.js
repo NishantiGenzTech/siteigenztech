@@ -39,7 +39,7 @@ function Navbar() {
 				>
 					<img
 						className="clogo responsive"
-						src={require("../images/igenzlogo-removebg-preview.png")}
+						src={require("../images/iGenZ_Logo__1_-removebg-preview.png")}
 						alt="logo"
 					/>
 				</NavLink>
@@ -58,7 +58,7 @@ function Navbar() {
 							activeClassName="active"
 							isActive={() => ["/StaffingSolutions", "/AIHiring"].includes(pathname)}
 						>
-							Product <i className="fas fa-caret-down" />
+							Services <i className="fas fa-caret-down" />
 						</NavLink>
 						{dropdown && <Dropdown />}
 					</li>
