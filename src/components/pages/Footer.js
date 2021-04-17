@@ -1,12 +1,13 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
 		<div className="footer">
 			<footer>
 				{" "}
-				&copy; Copyright 2021, IGENZ TECHNOLOGY PVT LTD,BENGALURU <br/>All Rights
-				Reserved{" "}
+				&copy; Copyright 2021, All Rights Reserved <br />
+				
 			</footer>
 		</div>
 	);

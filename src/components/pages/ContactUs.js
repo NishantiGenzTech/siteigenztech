@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../../App.css";
 import CForm from "../Cards/CForm";
+import { SocialIcon } from "react-social-icons";
 
 export default class ContactUs extends Component {
 	constructor(props) {
@@ -103,6 +104,15 @@ export default class ContactUs extends Component {
 										<p> &nbsp;&nbsp; to place your request</p>
 									</div>
 								</div>
+							</div>
+							<div className="socialicon">
+								<SocialIcon
+									
+									url="https://www.linkedin.com/company/igenztechnologies/"
+									target="_blank"
+									network="linkedin"
+								/>
+								&nbsp;&nbsp; Connect with Us for more updates
 							</div>
 						</div>
 					</div>
