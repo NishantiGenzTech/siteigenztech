@@ -39,7 +39,7 @@ function Navbar() {
 				>
 					<img
 						className="clogo responsive"
-						src={require("../images/iGenZ_Logo__1_-removebg-preview.png")}
+						src={require("../images/BlueOutline-removebg-preview.png")}
 						alt="logo"
 					/>
 				</NavLink>
