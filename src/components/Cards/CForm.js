@@ -4,11 +4,11 @@ import axios from "axios";
 
 export default function CForm({ handleClose, show, children, position, text }) {
 	const url="http://localhost:3002/api/form";
+	const [attachment, setAttachment]=useState(null);
 	const [data, setData]=useState({
 		username:"",
 		email :"", 
 		phone:"", 
-		resume :"",
 		message:""
 	})
 	
@@ -18,18 +18,25 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		setData(newdata)
 		
 	}
+	const handleAttachment = (e) => {
+		setAttachment(e.target.files[0])
+			
+		
+	};
 	function handleSubmit (e) {
-		
-		
 		e.preventDefault();
-		
-	   axios.post(url,{
-			username:data.username,
-			email:data.email,
-			phone:data.phone,
-			resume:data.resume[0],
-			message:data.message
-	   }).then(res=>{
+		const formData = new FormData();
+		for (let name in this.handle) {
+			formData.append(name, this.state[name]);
+		}
+	// 	{
+	// 		username:data.username,
+	// 		email:data.email,
+	// 		phone:data.phone,
+	// 		attachment:data.attachment[0],
+	// 		message:data.message
+	//    }
+	   axios.post(url,).then(res=>{
 		   console.log(res.data)
 	   })
 	   
@@ -138,18 +145,18 @@ export default function CForm({ handleClose, show, children, position, text }) {
 											name="resume" 
 											id="ctrlq-file-5-temp" 
 											accept=".pdf,.doc,.docx" 
-											value={data.resume}
-											id="resume"
-											onChange={(e)=>handle(e)}
+											value={attachment}
+											
+											onChange={(e)=>handleAttachment(e)}
 											data-error="#err-file-5" />
 									</div>
 									<div className="file-path-wrapper">
 										<input 
 										className="file-path garlic-auto-save" 
 										name="Resume" type="text"
-										id="resume" 
-										value={data.resume}
-										onChange={(e)=>handle(e)}
+									
+										value={attachment}
+										onChange={(e)=>handleAttachment(e)}
 										placeholder="Click Browse to upload files" 
 										data-error="#err-file-5" 
 										required="required" 
