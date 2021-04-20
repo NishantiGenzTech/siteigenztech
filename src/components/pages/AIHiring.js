@@ -4,7 +4,7 @@ import Aicard from "../Cards/Aicard";
 export default function AIHiring() {
 	return (
 		<>
-			<div class="aihi">
+			<div className="aihi">
 				<Aicard />
 			</div>
 		</>

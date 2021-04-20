@@ -43,7 +43,7 @@ export default class CardCareer extends Component {
 						<div className="course">
 							<div className="course-preview">
 								<i
-									class={
+									className={
 										`fab fa-` +
 										x.position.replace("Developer", "").toLowerCase()
 									}

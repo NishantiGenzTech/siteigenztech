@@ -46,40 +46,40 @@ export const Modal = ({ show, close }) => {
 								<div className="modal-body">
 									<form action="#" onSubmit={sendEmail}>
 										<label for="firstname">
-											{/* <i class="cntfrmicn fa fa-user" /> */}
+										
 											<input
 												name="name"
-												class="form-fields"
+												className="form-fields"
 												placeholder="Full Name..."
 												type="text"
 											/>
 										</label>
 										<label for="email">
-											{/* <i class="cntfrmicn fa fa-envelope" /> */}
+										
 											<input
 												name="email"
-												class="form-fields"
+												className="form-fields"
 												placeholder="Email..."
 												type="text"
 											/>
 										</label>
 										<label for="contact">
-											{/* <i class="cntfrmicn fa fa-phone" /> */}
+										
 											<input
 												name="contact"
-												class="form-fields"
+												className="form-fields"
 												placeholder="Contact..."
 												type="text"
 											/>
 										</label>
 
 										<button
-											class="form-fields button"
+											className="form-fields button"
 											type="submit"
 											value="Send"
 										>
 											Submit
-											<i class="fa fa-paper-plane"></i>
+											<i className="fa fa-paper-plane"></i>
 										</button>
 									</form>
 								</div>

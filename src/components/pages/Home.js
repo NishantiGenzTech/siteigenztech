@@ -35,7 +35,7 @@ export default function Home() {
 						<rect x="0" y="0" />
 					</svg>
 					<div className="scroll-down__content">Click to scroll</div>
-					<i class="fas fa-long-arrow-alt-down fa-2x"></i>
+					<i className="fas fa-long-arrow-alt-down fa-2x"></i>
 				</button>
 			</div>
 			<div id="target" className="full-width wildcard">
@@ -67,7 +67,7 @@ export default function Home() {
 					<rect x="0" y="0" />
 				</svg>
 
-				<i class="fas fa-long-arrow-alt-up fa-2x"></i>
+				<i className="fas fa-long-arrow-alt-up fa-2x"></i>
 				<div className="scroll-down__content">Click to Top</div>
 			</button>
 		</>

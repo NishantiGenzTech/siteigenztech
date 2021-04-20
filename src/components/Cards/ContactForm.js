@@ -36,36 +36,36 @@ const ContactForm = ({ handleClose, show, children }) => {
 					<i class="fas fa-times"></i>
 				</a>
 				{children}
-				<div class="row">
-					<div class="col-md-10 mx-auto">
-						<div class="myform form ">
+				<div className="row">
+					<div className="col-md-10 mx-auto">
+						<div className="myform form ">
 							<form action="" method="post" onSubmit={sendEmail} name="login">
-								<div class="form-group">
+								<div className="form-group">
 									<input
 										type="text"
 										name="name"
-										class="form-control my-input"
+										className="form-control my-input"
 										placeholder="Name"
 									/>
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 									<input
 										type="text"
 										name="email"
-										class="form-control my-input"
+										className="form-control my-input"
 										placeholder="Email"
 									/>
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 									<input
 										type="text"
 										name="contact"
-										class="form-control my-input"
+										className="form-control my-input"
 										placeholder="Phone"
 									/>
 								</div>
 								<button type="submit">
-									Submit<i class="fa fa-paper-plane"></i>
+									Submit<i className="fa fa-paper-plane"></i>
 								</button>
 							</form>
 						</div>

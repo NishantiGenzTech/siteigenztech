@@ -1,27 +1,62 @@
-import React from "react";
+import React ,{ useState, useEffect } from "react";
 import "./cfile.css";
-import emailjs from "emailjs-com";
+import axios from "axios";
 
 export default function CForm({ handleClose, show, children, position, text }) {
-	function sendEmail(e) {
-		e.preventDefault();
-
-		emailjs
-			.sendForm(
-				"service_k66nlin",
-				"template_waqpg06",
-				e.target,
-				"user_AxPlzgIo4G8UqVAGZredu"
-			)
-			.then(
-				(result) => {
-					console.log(result.text);
-				},
-				(error) => {
-					console.log(error.text);
-				}
-			);
+	const url="http://localhost:3002/api/form";
+	const [data, setData]=useState({
+		username:"",
+		email :"", 
+		phone:"", 
+		resume :"",
+		message:""
+	})
+	function handle(e){
+		const newdata={...data}
+		newdata[e.target.id]=e.target.value
+		setData(newdata)
+		console.log(newdata)
 	}
+	function handleSubmit (e) {
+		console.log("con 1")
+		e.preventDefault();
+		console.log("con 2")
+	   axios.post(url,{
+			username:data.username,
+			email:data.email,
+			phone:data.phone,
+			resume:data.resume[0],
+			message:data.message
+	   }).then(res=>{
+		   console.log(res.data)
+	   })
+	   console.log("con 3")
+        // const formData = new FormData();
+		// for (let name in name) {
+		// 	formData.append(name);
+		// }
+		// console.log(this.state.attachment.name);
+		// console.log(attachment);
+		//console.log(formData);
+		// const config = {
+		// 	headers: { "content-type": "multipart/form-data" },
+		// };
+		// axios
+		// 	.post("http://localhost:3002/api/form", formData)
+		// 	.then((res) => {
+		// 		console.log(res);
+		// 		this.setState(
+		// 			{
+		// 				send: true,
+		// 			},
+		// 			this.resetForm()
+		// 		);
+		// 	})
+		// 	.catch((error) => {
+		// 		console.log(error);
+		// 	});
+    }
+	
 	const showHideClassName = show ? "modal d-block" : "modal d-none";
 	console.log(text);
 	return (
@@ -43,7 +78,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							style={{ float: "right" }}
 							onClick={handleClose}
 						>
-							<i class="fas fa-times"></i>
+							<i className="fas fa-times"></i>
 						</a>
 					</div>
 				) : (
@@ -60,12 +95,12 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							style={{ float: "right" }}
 							onClick={handleClose}
 						>
-							<i class="fas fa-times"></i>
+							<i className="fas fa-times"></i>
 						</a>
 					</div>
 				)}
 
-				<form className="login100-form validate-form" onSubmit={sendEmail}>
+				<form className="login100-form validate-form" onSubmit={(e)=>handleSubmit(e)} >
 					<div className="wrap-input100 validate-input m-b-26">
 						<span className="label-input100">
 							Full Name<span className="red"> *</span>
@@ -74,6 +109,9 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							className="input100"
 							type="text"
 							name="username"
+							value={data.username}
+							onChange={(e)=>handle(e)}
+							id="username"
 							placeholder="Enter username"
 							required
 						/>
@@ -87,7 +125,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 						<input
 							className="input100"
 							type="text"
-							name="Email"
+							name="email"
+							id="email"
+							value={data.email}
+							onChange={(e)=>handle(e)}
 							placeholder="Enter Email"
 							required
 						/>
@@ -98,27 +139,72 @@ export default function CForm({ handleClose, show, children, position, text }) {
 						<input
 							className="input100"
 							type="text"
-							name="Phone"
+							value={data.phone}
+							onChange={(e)=>handle(e)}
+							name="phone"
+							id="phone"
 							placeholder="Enter Phone"
 						/>
 						<span className="focus-input100"></span>
 					</div>
+					{text ? (
+					<div className="wrap-input100 validate-input m-b-26">
+						<span className="label-input100">Resume <span className="red"> *</span></span>
+						<div className="input-field">
+							<div className="file-field input-field">
+								<div className="btn file-upload-btn">
+									<span>Browse</span>
+										<input 
+											type="file" 
+											name="resume" 
+											id="ctrlq-file-5-temp" 
+											accept=".pdf,.doc,.docx" 
+											value={data.resume}
+											id="resume"
+											onChange={(e)=>handle(e)}
+											data-error="#err-file-5" />
+									</div>
+									<div className="file-path-wrapper">
+										<input 
+										className="file-path garlic-auto-save" 
+										name="Resume" type="text"
+										id="resume" 
+										value={data.resume}
+										onChange={(e)=>handle(e)}
+										placeholder="Click Browse to upload files" 
+										data-error="#err-file-5" 
+										required="required" 
+										
+										
+										data-msg-required="Please upload a file" /> 
+									</div>
+								<div id="err-file-5">
+								</div>
+							</div>
+						</div>
+						<span className="focus-input100"></span>
+					</div>
+					) : (
 					<div className="wrap-input100 validate-input m-b-26">
 						<span className="label-input100">Message</span>
 						<textarea
 							className="input100 msgborder"
 							type="text"
-							name="Message"
+							name="message"
+							id="message"
+							value={data.message}
+							onChange={(e)=>handle(e)}
 							placeholder="Enter Message"
 						/>
 						<span className="focus-input100"></span>
 					</div>
+					)}
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+					<div className="container-login100-form-btn">
+						<button className="login100-form-btn">
 							{text ? "APPLY" : "SUBMIT"}
 							&nbsp;&nbsp;
-							<i class="fas fa-angle-double-right"></i>
+							<i className="fas fa-angle-double-right"></i>
 						</button>
 					</div>
 				</form>

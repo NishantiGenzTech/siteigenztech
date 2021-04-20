@@ -57,7 +57,7 @@ export default class ContactUs extends Component {
 								<div className="icon-contacts pb-3">
 									<img
 										src="https://clientdemozone.com/suyash/wp-content/uploads/2020/09/address.png"
-										class="scale-with-grid"
+										className="scale-with-grid"
 										alt=""
 										width=""
 										height=""
@@ -69,7 +69,7 @@ export default class ContactUs extends Component {
 								<div className="icon-contacts pb-3">
 									<img
 										src="https://clientdemozone.com/suyash/wp-content/uploads/2020/09/email.png"
-										class="scale-with-grid"
+										className="scale-with-grid"
 										alt=""
 										width=""
 										height=""
@@ -81,7 +81,7 @@ export default class ContactUs extends Component {
 								<div className="icon-contacts pb-3">
 									<img
 										src="https://clientdemozone.com/suyash/wp-content/uploads/2020/09/call-us-1.png"
-										class="scale-with-grid"
+										className="scale-with-grid"
 										alt=""
 										width=""
 										height=""
