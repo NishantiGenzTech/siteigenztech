@@ -3,7 +3,7 @@ import "./AiCard.css";
 import data from "../../data/data.json";
 
 export default function Aicard() {
-	console.log(data.Aihiring[0].image);
+
 	return (
 		<>
 			{/* <button>Left</button> */}

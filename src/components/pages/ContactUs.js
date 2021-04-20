@@ -13,7 +13,7 @@ export default class ContactUs extends Component {
 	}
 	modalOpen(e) {
 		this.setState({ modal: true });
-		console.log("model open");
+		
 	}
 	modalClose(e) {
 		this.setState({

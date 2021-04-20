@@ -75,7 +75,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	}
 
 	const showHideClassName = show ? "modal d-block" : "modal d-none";
-	console.log(text);
+	// console.log(text);
 	return (
 		<div className={showHideClassName}>
 			<div className="wrap-login100">
@@ -90,7 +90,6 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							{`Applying For ` + text}
 						</span>
 						<a
-							href="javascript:;"
 							className="modal-close"
 							style={{ float: "right" }}
 							onClick={handleClose}
@@ -107,7 +106,6 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					>
 						<span className="login100-form-title-1">Contact Us</span>
 						<a
-							href="javascript:;"
 							className="modal-close"
 							style={{ float: "right" }}
 							onClick={handleClose}
