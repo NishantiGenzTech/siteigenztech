@@ -28,7 +28,7 @@ const ContactForm = ({ handleClose, show, children }) => {
 		<div className={showHideClassName}>
 			<div className="modal-container">
 				<a
-					href="javascript:;"
+				
 					className="modal-close"
 					style={{ float: "right" }}
 					onClick={handleClose}

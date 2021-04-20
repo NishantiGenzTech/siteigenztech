@@ -11,16 +11,18 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		resume :"",
 		message:""
 	})
+	
 	function handle(e){
 		const newdata={...data}
 		newdata[e.target.id]=e.target.value
 		setData(newdata)
-		console.log(newdata)
+		
 	}
 	function handleSubmit (e) {
-		console.log("con 1")
+		
+		
 		e.preventDefault();
-		console.log("con 2")
+		
 	   axios.post(url,{
 			username:data.username,
 			email:data.email,
@@ -30,35 +32,12 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	   }).then(res=>{
 		   console.log(res.data)
 	   })
-	   console.log("con 3")
-        // const formData = new FormData();
-		// for (let name in name) {
-		// 	formData.append(name);
-		// }
-		// console.log(this.state.attachment.name);
-		// console.log(attachment);
-		//console.log(formData);
-		// const config = {
-		// 	headers: { "content-type": "multipart/form-data" },
-		// };
-		// axios
-		// 	.post("http://localhost:3002/api/form", formData)
-		// 	.then((res) => {
-		// 		console.log(res);
-		// 		this.setState(
-		// 			{
-		// 				send: true,
-		// 			},
-		// 			this.resetForm()
-		// 		);
-		// 	})
-		// 	.catch((error) => {
-		// 		console.log(error);
-		// 	});
+	   
+      
     }
 	
 	const showHideClassName = show ? "modal d-block" : "modal d-none";
-	console.log(text);
+	// console.log(text);
 	return (
 		<div className={showHideClassName}>
 			<div className="wrap-login100">
@@ -73,7 +52,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							{`Applying For ` + text}
 						</span>
 						<a
-							href="javascript:;"
+							
 							className="modal-close"
 							style={{ float: "right" }}
 							onClick={handleClose}
@@ -90,7 +69,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					>
 						<span className="login100-form-title-1">Contact Us</span>
 						<a
-							href="javascript:;"
+						
 							className="modal-close"
 							style={{ float: "right" }}
 							onClick={handleClose}

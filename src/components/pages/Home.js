@@ -82,7 +82,7 @@ function ScrollToTop() {
 	}
 }
 const handleScroll = (e) => {
-	console.log("clicked");
+	
 	const targetId = e.target.dataset.targetId;
 	if (targetId) {
 		const targetElement = document.getElementById(targetId);
@@ -91,11 +91,11 @@ const handleScroll = (e) => {
 	}
 };
 const processScroll = (dimenY) => {
-	console.log("pass 1");
+	
 	__processScroll(dimenY, 0, 1);
 };
 const __processScroll = (distanceLeft, distanceCovered, stepSize) => {
-	console.log("pass 2");
+	
 	setTimeout(() => {
 		if (distanceLeft > distanceCovered) {
 			stepSize = 1.1 * stepSize;
@@ -111,6 +111,6 @@ const __processScroll = (distanceLeft, distanceCovered, stepSize) => {
 				stepSize
 			);
 		}
-		console.log("pass 3");
+		
 	}, 10);
 };
