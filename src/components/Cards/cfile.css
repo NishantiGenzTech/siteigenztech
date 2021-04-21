@@ -43,18 +43,18 @@
 	background-color: rgba(54, 84, 99, 0.7);
 }
 .input-field {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+	position: relative;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .file-field {
-    position: relative;
+	position: relative;
 }
 
 .input-field {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+	position: relative;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .login100-form {
 	width: 100%;
@@ -68,62 +68,59 @@
 	padding: 43px 88px 30px 190px;
 }
 .file-field .btn {
-  
-    height: 3rem;
-    
+	height: 3rem;
 }
 .file-field span {
-    cursor: pointer;
+	cursor: pointer;
 }
-.file-field input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
+.file-field input[type="file"] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
 }
-input[type=text]:not(.browser-default){
+input[type="text"]:not(.browser-default) {
 	background-color: transparent;
-    border: none;
-   
-    border-radius: 0;
-    outline: none;
-    height: 2rem;
-    width: 100%;
-    font-size: 16px;
-    margin: 0 0 8px 0;
-    padding: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    -webkit-transition: border .3s, -webkit-box-shadow .3s;
-    transition: border .3s, -webkit-box-shadow .3s;
-    transition: box-shadow .3s, border .3s;
-    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
-	color: rgba(0,0,0,0.42);
-   
+	border: none;
+
+	border-radius: 0;
+	outline: none;
+	height: 2rem;
+	width: 100%;
+	font-size: 16px;
+	margin: 0 0 8px 0;
+	padding: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-transition: border 0.3s, -webkit-box-shadow 0.3s;
+	transition: border 0.3s, -webkit-box-shadow 0.3s;
+	transition: box-shadow 0.3s, border 0.3s;
+	transition: box-shadow 0.3s, border 0.3s, -webkit-box-shadow 0.3s;
+	color: rgba(0, 0, 0, 0.42);
 }
 .file-field .file-path-wrapper {
-    overflow: hidden;
-    padding-left: 10px;
+	overflow: hidden;
+	padding-left: 10px;
 }
-.btn, .btn-large {
-    text-decoration: none;
-  
-   
-    text-align: center;
-    letter-spacing: .5px;
-    -webkit-transition: background-color .2s ease-out;
-    transition: background-color .2s ease-out;
-    cursor: pointer;
+.btn,
+.btn-large {
+	text-decoration: none;
+
+	text-align: center;
+	letter-spacing: 0.5px;
+	-webkit-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+	cursor: pointer;
 }
 .wrap-input100 {
 	width: 100%;
@@ -213,6 +210,12 @@ button {
 	background: transparent;
 	padding: 0 5px;
 }
+
+.error {
+	width: 100%;
+	border: 1px solid #eb516d !important;
+}
+
 .focus-input100 {
 	position: absolute;
 	display: block;
@@ -226,6 +229,6 @@ button {
 	margin-bottom: 18px;
 }
 
-.red{
+.red {
 	color: red;
 }

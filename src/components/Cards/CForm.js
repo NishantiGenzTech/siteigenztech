@@ -13,14 +13,18 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		send: false,
 	});
 
+	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [attachment, setAttachment] = useState(null);
+
 	console.log(attachment);
+	console.log(data.username.length);
+	console.log(isSubmitting);
 
 	function handle(e) {
 		const newdata = { ...data };
 		newdata[e.target.id] = e.target.value;
 		setData(newdata);
-		console.log(newdata);
+		console.log(newdata.username);
 	}
 
 	function handleAttachment(e) {
@@ -29,9 +33,12 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	}
 
 	function handleSubmit(e) {
-		console.log("con 1");
 		e.preventDefault();
+		setIsSubmitting(true);
+		console.log(isSubmitting);
+		console.log("con 1");
 		console.log("con 2");
+		console.log(isSubmitting);
 
 		const formData = new FormData();
 		for (let name in data) {
@@ -40,8 +47,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		console.log(data);
 		formData.append("attachment", attachment);
 		console.log(formData);
+
 		axios
 			.post(url, formData)
+
 			.then((res) => {
 				console.log(res.data);
 				setData(
@@ -51,6 +60,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					resetForm()
 				);
 			})
+
 			.catch((error) => {
 				console.log(error);
 			});
@@ -64,6 +74,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 			// message: "",
 			// send: false,
 		});
+		setIsSubmitting(false);
 		setAttachment({
 			attachment: null,
 		});
@@ -71,7 +82,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 			setData({
 				send: false,
 			});
-		}, 4000);
+		}, 2000);
 	}
 
 	const showHideClassName = show ? "modal d-block" : "modal d-none";
@@ -119,7 +130,13 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					className="login100-form validate-form"
 					onSubmit={(e) => handleSubmit(e)}
 				>
-					<div className="wrap-input100 validate-input m-b-26">
+					<div
+						className={
+							isSubmitting && !data.username.length
+								? "error validate-input m-b-26"
+								: "wrap-input100 validate-input m-b-26"
+						}
+					>
 						<span className="label-input100">
 							Full Name<span className="red"> *</span>
 						</span>
@@ -127,16 +144,27 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							className="input100"
 							type="text"
 							name="username"
-							value={data.username}
+							value={data.username || ""}
 							onChange={(e) => handle(e)}
 							id="username"
-							placeholder="Enter username"
-							required
+							// placeholder={
+							// 	isSubmitting && !data.username.length
+							// 		? "Please Enter Username"
+							// 		: "Enter username"
+							// }
+							placeholder="Enter Username"
+							// required
 						/>
 						<span className="focus-input100"></span>
 					</div>
 
-					<div className="wrap-input100 validate-input m-b-26">
+					<div
+						className={
+							isSubmitting && !data.email.length
+								? "error validate-input m-b-26"
+								: "wrap-input100 validate-input m-b-26"
+						}
+					>
 						<span className="label-input100">
 							Email<span className="red"> *</span>
 						</span>
@@ -145,10 +173,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							type="text"
 							name="email"
 							id="email"
-							value={data.email}
+							value={data.email || ""}
 							onChange={(e) => handle(e)}
 							placeholder="Enter Email"
-							required
+							// required
 						/>
 						<span className="focus-input100"></span>
 					</div>
@@ -157,11 +185,11 @@ export default function CForm({ handleClose, show, children, position, text }) {
 						<input
 							className="input100"
 							type="text"
-							value={data.phone}
+							value={data.phone || ""}
 							onChange={(e) => handle(e)}
 							name="phone"
 							id="phone"
-							placeholder="Enter Phone"
+							placeholder="Enter Phone(Optional)"
 						/>
 						<span className="focus-input100"></span>
 					</div>
@@ -180,6 +208,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 											id="ctrlq-file-5-temp"
 											accept=".pdf,.doc,.docx"
 											// id="resume"
+											// required
 											onChange={(e) => handleAttachment(e)}
 											data-error="#err-file-5"
 										/>
@@ -190,7 +219,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 											name="attachment"
 											type="text"
 											// id="resume"
-											// onChange={(e) => handleAttachment(e)}
+											onChange={(e) => handleAttachment(e)}
 											placeholder="Click Browse to upload files"
 											data-error="#err-file-5"
 											data-msg-required="Please upload a file"
