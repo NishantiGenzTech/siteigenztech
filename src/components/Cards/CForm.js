@@ -16,7 +16,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [attachment, setAttachment] = useState(null);
 
-	console.log(attachment);
+	//console.log(attachment);
 
 	if (data.username) {
 		console.log(data.username.length);
@@ -24,7 +24,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		console.log(data.username);
 	}
 
-	console.log(isSubmitting);
+	// console.log(isSubmitting);
 	useEffect(() => {
 		console.log(attachment);
 	});
@@ -32,29 +32,29 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		const newdata = { ...data };
 		newdata[e.target.id] = e.target.value;
 		setData(newdata);
-		console.log(newdata.username);
+		// console.log(newdata.username);
 	}
 
 	function handleAttachment(e) {
 		setAttachment(e.target.files[0]);
-		console.log(attachment);
+		// console.log(attachment);
 	}
 
 	async function handleSubmit(e) {
 		e.preventDefault();
 		setIsSubmitting(true);
-		console.log(isSubmitting);
-		console.log("con 1");
-		console.log("con 2");
-		console.log(isSubmitting);
+		// console.log(isSubmitting);
+		// console.log("con 1");
+		// console.log("con 2");
+		// console.log(isSubmitting);
 
 		const formData = new FormData();
 		for (let name in data) {
 			formData.append(name, data[name]);
 		}
-		console.log(data);
+		// console.log(data);
 		formData.append("attachment", attachment);
-		console.log(formData);
+		// console.log(formData);
 
 		axios
 			.post(url, formData)
@@ -78,7 +78,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 			email: "",
 			phone: "",
 		});
-		console.log(isSubmitting);
+		// console.log(isSubmitting);
 		setIsSubmitting(false);
 		setAttachment(null);
 		setTimeout(() => {
