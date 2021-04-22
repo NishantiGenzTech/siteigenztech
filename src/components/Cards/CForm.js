@@ -16,6 +16,16 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [attachment, setAttachment] = useState(null);
 
+	// const [resetData, setresetData] = useState({
+	// 	username,
+	// 	email,
+	// 	phone,
+	// 	message,
+	// 	send,
+	// 	isSubmitting,
+	// 	attachment,
+	// });
+
 	//console.log(attachment);
 
 	if (data.username) {
@@ -56,14 +66,15 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		formData.append("attachment", attachment);
 		// console.log(formData);
 
-		axios
+		await axios
 			.post(url, formData)
 
 			.then((res) => {
 				console.log(res.data);
-				setData({
-					send: true,
-				});
+				// setData({
+				// 	send: true,
+				// });
+				console.log("Should go ");
 				resetForm();
 			})
 
@@ -78,7 +89,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 			email: "",
 			phone: "",
 		});
-		// console.log(isSubmitting);
+		console.log("Hello from rest");
 		setIsSubmitting(false);
 		setAttachment(null);
 		setTimeout(() => {
@@ -88,6 +99,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		}, 2000);
 	}
 
+	function rendermsg() {
+		console.log("Helloste");
+		// return alert("Hello");
+	}
 	const showHideClassName = show ? "modal d-block" : "modal d-none";
 	// console.log(text);
 	return (
@@ -264,7 +279,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					)}
 
 					<div className="container-login100-form-btn">
-						<button className="login100-form-btn">
+						<button className="login100-form-btn" onClick={rendermsg}>
 							{text ? "APPLY" : "SUBMIT"}
 							&nbsp;&nbsp;
 							<i className="fas fa-angle-double-right"></i>
