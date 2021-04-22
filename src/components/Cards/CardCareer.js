@@ -39,7 +39,7 @@ export default class CardCareer extends Component {
 		return (
 			<>
 				{data.Careers.map((x) => (
-					<div className="courses-container">
+					<div className="courses-container" key={x.id}>
 						<div className="course">
 							<div className="course-preview">
 								<i
@@ -48,6 +48,7 @@ export default class CardCareer extends Component {
 										x.position.replace("Developer", "").toLowerCase()
 									}
 								></i>
+
 								<h2>{x.position}</h2>
 								<button
 									className="btn"

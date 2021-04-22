@@ -73,7 +73,7 @@
 
 	"Careers": [
 		{
-			"id":1,
+			"id": 1,
 			"position": "Python Developer",
 			"opening": "FRESHER PREFERRED!",
 			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn Python quickly",
@@ -82,7 +82,7 @@
 			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
 		},
 		{
-			"id":2,
+			"id": 2,
 			"position": "React Developer",
 			"opening": "FRESHER PREFERRED!",
 			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn React quickly",
@@ -91,7 +91,7 @@
 			"Commontext1": "* Please apply. if you are a graduate in any other discipline and have good pregramming skills."
 		},
 		{
-			"id":2,
+			"id": 3,
 			"position": "Java Developer",
 			"opening": "FRESHER PREFERRED!",
 			"text": "Great opportunity for freshers (2020 passed) willing to adapt the learn Java quickly",

@@ -19,7 +19,9 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	console.log(attachment);
 	console.log(data.username.length);
 	console.log(isSubmitting);
-
+	useEffect(() => {
+		console.log(attachment);
+	});
 	function handle(e) {
 		const newdata = { ...data };
 		newdata[e.target.id] = e.target.value;
@@ -28,11 +30,12 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	}
 
 	function handleAttachment(e) {
+		// const att1 = { attachment };
 		setAttachment(e.target.files[0]);
 		console.log(attachment);
 	}
 
-	function handleSubmit(e) {
+	async function handleSubmit(e) {
 		e.preventDefault();
 		setIsSubmitting(true);
 		console.log(isSubmitting);
@@ -71,13 +74,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 			username: "",
 			email: "",
 			phone: "",
-			// message: "",
-			// send: false,
 		});
+		console.log(isSubmitting);
 		setIsSubmitting(false);
-		setAttachment({
-			attachment: null,
-		});
+		setAttachment(null);
 		setTimeout(() => {
 			setData({
 				send: false,
@@ -144,8 +144,9 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							className="input100"
 							type="text"
 							name="username"
-							value={data.username || ""}
-							onChange={(e) => handle(e)}
+							value={data.username}
+							// onChange={(e) => handle(e)}
+							onChange={handle}
 							id="username"
 							// placeholder={
 							// 	isSubmitting && !data.username.length
@@ -157,6 +158,11 @@ export default function CForm({ handleClose, show, children, position, text }) {
 						/>
 						<span className="focus-input100"></span>
 					</div>
+					{isSubmitting && !data.email.length ? (
+						<div className="errorMsg">*Enter Username</div>
+					) : (
+						""
+					)}
 
 					<div
 						className={
@@ -174,19 +180,26 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							name="email"
 							id="email"
 							value={data.email || ""}
-							onChange={(e) => handle(e)}
+							// onChange={(e) => handle(e)}
+							onChange={handle}
 							placeholder="Enter Email"
 							// required
 						/>
 						<span className="focus-input100"></span>
 					</div>
+					{isSubmitting && !data.email.length ? (
+						<div className="errorMsg">*Enter Email</div>
+					) : (
+						""
+					)}
 					<div className="wrap-input100 validate-input m-b-26">
 						<span className="label-input100">Phone</span>
 						<input
 							className="input100"
 							type="text"
 							value={data.phone || ""}
-							onChange={(e) => handle(e)}
+							// onChange={(e) => handle(e)}
+							onChange={handle}
 							name="phone"
 							id="phone"
 							placeholder="Enter Phone(Optional)"
@@ -194,7 +207,13 @@ export default function CForm({ handleClose, show, children, position, text }) {
 						<span className="focus-input100"></span>
 					</div>
 					{text ? (
-						<div className="wrap-input100 validate-input m-b-26">
+						<div
+							className={
+								isSubmitting && !data.email.length
+									? "error validate-input m-b-26"
+									: "wrap-input100 validate-input m-b-26"
+							}
+						>
 							<span className="label-input100">
 								Resume <span className="red"> *</span>
 							</span>
@@ -244,6 +263,11 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							/>
 							<span className="focus-input100"></span>
 						</div>
+					)}
+					{isSubmitting && !data.email.length ? (
+						<div className="errorMsg">*Upload Resume</div>
+					) : (
+						""
 					)}
 
 					<div className="container-login100-form-btn">

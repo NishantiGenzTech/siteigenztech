@@ -214,8 +214,12 @@ button {
 .error {
 	width: 100%;
 	border: 1px solid #eb516d !important;
+	margin: 0px !important;
 }
-
+.errorMsg {
+	color: #cc0000;
+	margin-bottom: 12px;
+}
 .focus-input100 {
 	position: absolute;
 	display: block;
