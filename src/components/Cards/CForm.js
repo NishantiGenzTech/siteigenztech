@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./cfile.css";
 import axios from "axios";
+import FlashMessage from "react-flash-message";
 
 export default function CForm({ handleClose, show, children, position, text }) {
 	const url = "http://localhost:3002/api/form";
@@ -12,7 +13,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		message: "",
 		send: false,
 	});
-
+	const [status, setStatus] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [attachment, setAttachment] = useState(null);
 
@@ -81,6 +82,8 @@ export default function CForm({ handleClose, show, children, position, text }) {
 			.catch((error) => {
 				console.log(error);
 			});
+			setStatus(true);
+			
 	}
 
 	function resetForm() {
@@ -148,6 +151,13 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					className="login100-form validate-form"
 					onSubmit={(e) => handleSubmit(e)}
 				>
+				<div>
+				{status && (
+					<FlashMessage duration={5000}>
+					  <strong className="alert-success" >Thanku for applying for {text} Position we contact shottly</strong>
+					</FlashMessage>
+				  )}
+				  </div>
 					<div
 						className={
 							isSubmitting && !data.username.length

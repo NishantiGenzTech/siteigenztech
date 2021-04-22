@@ -65,7 +65,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 43px 88px 30px 190px;
+	padding: 24px 88px 30px 190px;
 }
 .file-field .btn {
 	height: 3rem;
@@ -236,3 +236,23 @@ button {
 .red {
 	color: red;
 }
+.alert-error {
+	background-color: #f2d7d5;
+	border-left-color: #c0392b;
+	color: #c0392b;
+  }
+  
+  .alert-success {
+	background-color: #d5f5e3;
+    border-left-color: #2ecc71;
+    color: #2ecc71;
+    display: block;
+    padding: 16px;
+    border-left: 5px solid;
+  }
+  
+  .alert {
+	display: block;
+	padding: 20px;
+	border-left: 5px solid;
+  }
