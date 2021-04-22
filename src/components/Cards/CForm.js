@@ -17,7 +17,13 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	const [attachment, setAttachment] = useState(null);
 
 	console.log(attachment);
-	console.log(data.username.length);
+
+	if (data.username) {
+		console.log(data.username.length);
+	} else {
+		console.log(data.username);
+	}
+
 	console.log(isSubmitting);
 	useEffect(() => {
 		console.log(attachment);
@@ -30,7 +36,6 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	}
 
 	function handleAttachment(e) {
-		// const att1 = { attachment };
 		setAttachment(e.target.files[0]);
 		console.log(attachment);
 	}
@@ -56,12 +61,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 
 			.then((res) => {
 				console.log(res.data);
-				setData(
-					{
-						send: true,
-					},
-					resetForm()
-				);
+				setData({
+					send: true,
+				});
+				resetForm();
 			})
 
 			.catch((error) => {
@@ -144,17 +147,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							className="input100"
 							type="text"
 							name="username"
-							value={data.username}
-							// onChange={(e) => handle(e)}
-							onChange={handle}
+							value={data.username ? data.username : ""}
+							onChange={(e) => handle(e)}
 							id="username"
-							// placeholder={
-							// 	isSubmitting && !data.username.length
-							// 		? "Please Enter Username"
-							// 		: "Enter username"
-							// }
 							placeholder="Enter Username"
-							// required
 						/>
 						<span className="focus-input100"></span>
 					</div>
@@ -180,10 +176,8 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							name="email"
 							id="email"
 							value={data.email || ""}
-							// onChange={(e) => handle(e)}
-							onChange={handle}
+							onChange={(e) => handle(e)}
 							placeholder="Enter Email"
-							// required
 						/>
 						<span className="focus-input100"></span>
 					</div>
@@ -198,8 +192,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							className="input100"
 							type="text"
 							value={data.phone || ""}
-							// onChange={(e) => handle(e)}
-							onChange={handle}
+							onChange={(e) => handle(e)}
 							name="phone"
 							id="phone"
 							placeholder="Enter Phone(Optional)"
