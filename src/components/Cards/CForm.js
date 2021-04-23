@@ -5,17 +5,21 @@ import FlashMessage from "react-flash-message";
 
 export default function CForm({ handleClose, show, children, position, text }) {
 	const url = "http://localhost:3002/api/form";
-
+	const [attachment, setAttachment] = useState(null);
 	const [data, setData] = useState({
 		username: "",
 		email: "",
 		phone: "",
 		message: "",
-		send: false,
+
+		touched: {
+			email: false,
+			username: false,
+			attachment: false,
+		},
 	});
 	const [status, setStatus] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [attachment, setAttachment] = useState(null);
 
 	// const [resetData, setresetData] = useState({
 	// 	username,
@@ -36,9 +40,9 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	}
 
 	// console.log(isSubmitting);
-	useEffect(() => {
-		console.log(attachment);
-	});
+	// useEffect(() => {
+	// 	console.log(attachment);
+	// });
 	function handle(e) {
 		const newdata = { ...data };
 		newdata[e.target.id] = e.target.value;
@@ -51,13 +55,18 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		// console.log(attachment);
 	}
 
+	function handleBlur(field) {
+		setData({
+			touched: { ...data.touched, [field]: true },
+		});
+	}
+
 	async function handleSubmit(e) {
-		e.preventDefault();
+		if (!this.canBeSubmitted()) {
+			e.preventDefault();
+			return;
+		}
 		setIsSubmitting(true);
-		// console.log(isSubmitting);
-		// console.log("con 1");
-		// console.log("con 2");
-		// console.log(isSubmitting);
 
 		const formData = new FormData();
 		for (let name in data) {
@@ -82,8 +91,13 @@ export default function CForm({ handleClose, show, children, position, text }) {
 			.catch((error) => {
 				console.log(error);
 			});
-			setStatus(true);
-			
+		setStatus(true);
+	}
+
+	function canBeSubmitted() {
+		const errors = validate(this.email, this.username, attachment);
+		const isDisabled = Object.keys(errors).some((x) => errors[x]);
+		return !isDisabled;
 	}
 
 	function resetForm() {
@@ -91,21 +105,38 @@ export default function CForm({ handleClose, show, children, position, text }) {
 			username: "",
 			email: "",
 			phone: "",
+			message: "",
 		});
 		console.log("Hello from rest");
 		setIsSubmitting(false);
-		setAttachment(null);
+		// setAttachment(null);
 		setTimeout(() => {
-			setData({
-				send: false,
-			});
-		}, 2000);
+			handleClose();
+			// setData({
+			// 	send: false,
+			// });
+		}, 4000);
 	}
 
-	function rendermsg() {
-		console.log("Helloste");
-		// return alert("Hello");
+	function validate(email, username, attachment) {
+		// true means invalid, so our conditions got reversed
+		return {
+			email: email.length === 0, //true if email is empty
+			username: username.length === 0, //true if username is empty
+			attachment: attachment === null, //true if password is empty
+		};
 	}
+
+	const shouldMarkError = (field) => {
+		const hasError = errors[field];
+		const shouldShow = data.touched[field];
+
+		return hasError ? shouldShow : false;
+	};
+	// function rendermsg() {
+	// 	console.log("Helloste");
+	// 	// return alert("Hello");
+	// }
 	const showHideClassName = show ? "modal d-block" : "modal d-none";
 	// console.log(text);
 	return (
@@ -151,13 +182,15 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					className="login100-form validate-form"
 					onSubmit={(e) => handleSubmit(e)}
 				>
-				<div>
-				{status && (
-					<FlashMessage duration={5000}>
-					  <strong className="alert-success" >Thanku for applying for {text} Position we contact shottly</strong>
-					</FlashMessage>
-				  )}
-				  </div>
+					<div>
+						{status && (
+							<FlashMessage duration={3000}>
+								<strong className="alert-success">
+									Thanku for applying for {text} Position We Will You Shortly
+								</strong>
+							</FlashMessage>
+						)}
+					</div>
 					<div
 						className={
 							isSubmitting && !data.username.length
@@ -179,7 +212,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 						/>
 						<span className="focus-input100"></span>
 					</div>
-					{isSubmitting && !data.email.length ? (
+					{isSubmitting && !data.username.length ? (
 						<div className="errorMsg">*Enter Username</div>
 					) : (
 						""
@@ -227,7 +260,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					{text ? (
 						<div
 							className={
-								isSubmitting && !data.email.length
+								isSubmitting && !attachment
 									? "error validate-input m-b-26"
 									: "wrap-input100 validate-input m-b-26"
 							}
@@ -289,7 +322,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					)}
 
 					<div className="container-login100-form-btn">
-						<button className="login100-form-btn" onClick={rendermsg}>
+						<button className="login100-form-btn">
 							{text ? "APPLY" : "SUBMIT"}
 							&nbsp;&nbsp;
 							<i className="fas fa-angle-double-right"></i>
