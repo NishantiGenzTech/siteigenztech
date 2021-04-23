@@ -62,7 +62,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	}
 
 	async function handleSubmit(e) {
-		if (!this.canBeSubmitted()) {
+		if (!canBeSubmitted()) {
 			e.preventDefault();
 			return;
 		}
@@ -95,7 +95,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	}
 
 	function canBeSubmitted() {
-		const errors = validate(this.email, this.username, attachment);
+		const errors = validate(data.email, data.username, attachment);
 		const isDisabled = Object.keys(errors).some((x) => errors[x]);
 		return !isDisabled;
 	}
@@ -128,6 +128,8 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	}
 
 	const shouldMarkError = (field) => {
+		const errors = validate(data.email, data.username, data.password);
+		const isDisabled = Object.keys(errors).some((x) => errors[x]);
 		const hasError = errors[field];
 		const shouldShow = data.touched[field];
 
@@ -193,7 +195,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					</div>
 					<div
 						className={
-							isSubmitting && !data.username.length
+							shouldMarkError("username")
 								? "error validate-input m-b-26"
 								: "wrap-input100 validate-input m-b-26"
 						}
@@ -209,18 +211,17 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							onChange={(e) => handle(e)}
 							id="username"
 							placeholder="Enter Username"
+							onBlur={handleBlur("email")}
 						/>
 						<span className="focus-input100"></span>
 					</div>
-					{isSubmitting && !data.username.length ? (
-						<div className="errorMsg">*Enter Username</div>
-					) : (
-						""
-					)}
+					<span className={shouldMarkError("email") ? "error" : "hidden"}>
+						invalid username
+					</span>
 
 					<div
 						className={
-							isSubmitting && !data.email.length
+							shouldMarkError("email")
 								? "error validate-input m-b-26"
 								: "wrap-input100 validate-input m-b-26"
 						}
@@ -236,14 +237,13 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							value={data.email || ""}
 							onChange={(e) => handle(e)}
 							placeholder="Enter Email"
+							onBlur={handleBlur("email")}
 						/>
 						<span className="focus-input100"></span>
 					</div>
-					{isSubmitting && !data.email.length ? (
-						<div className="errorMsg">*Enter Email</div>
-					) : (
-						""
-					)}
+					<span className={shouldMarkError("username") ? "error" : "hidden"}>
+						invalid email
+					</span>
 					<div className="wrap-input100 validate-input m-b-26">
 						<span className="label-input100">Phone</span>
 						<input
@@ -260,7 +260,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					{text ? (
 						<div
 							className={
-								isSubmitting && !attachment
+								shouldMarkError("attchment")
 									? "error validate-input m-b-26"
 									: "wrap-input100 validate-input m-b-26"
 							}
@@ -281,6 +281,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 											// required
 											onChange={(e) => handleAttachment(e)}
 											data-error="#err-file-5"
+											onBlur={handleBlur("email")}
 										/>
 									</div>
 									<div className="file-path-wrapper">
@@ -289,6 +290,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 											name="attachment"
 											type="text"
 											// id="resume"
+											value={attachment || ""}
 											onChange={(e) => handleAttachment(e)}
 											placeholder="Click Browse to upload files"
 											data-error="#err-file-5"
@@ -315,11 +317,9 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							<span className="focus-input100"></span>
 						</div>
 					)}
-					{isSubmitting && !data.email.length ? (
-						<div className="errorMsg">*Upload Resume</div>
-					) : (
-						""
-					)}
+					<span className={shouldMarkError("username") ? "error" : "hidden"}>
+						invalid file
+					</span>
 
 					<div className="container-login100-form-btn">
 						<button className="login100-form-btn">

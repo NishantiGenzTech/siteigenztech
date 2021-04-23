@@ -213,11 +213,11 @@ button {
 
 .error {
 	width: 100%;
-	border: 1px solid #eb516d !important;
+	border: 1px solid hsl(349, 79%, 62%) !important;
 	margin: 0px !important;
+	color: #cc0000;
 }
 .errorMsg {
-	color: #cc0000;
 	margin-bottom: 12px;
 }
 .focus-input100 {
@@ -240,19 +240,19 @@ button {
 	background-color: #f2d7d5;
 	border-left-color: #c0392b;
 	color: #c0392b;
-  }
-  
-  .alert-success {
+}
+
+.alert-success {
 	background-color: #d5f5e3;
-    border-left-color: #2ecc71;
-    color: #2ecc71;
-    display: block;
-    padding: 16px;
-    border-left: 5px solid;
-  }
-  
-  .alert {
+	border-left-color: #2ecc71;
+	color: #2ecc71;
+	display: block;
+	padding: 16px;
+	border-left: 5px solid;
+}
+
+.alert {
 	display: block;
 	padding: 20px;
 	border-left: 5px solid;
-  }
+}
