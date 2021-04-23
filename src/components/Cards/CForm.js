@@ -10,8 +10,9 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		username: "",
 		email: "",
 		phone: "",
-		message: "",
+		messages: "",
 		send: false,
+		
 	});
 	const [status, setStatus] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
@@ -72,6 +73,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 				console.log(error);
 			});
 			setStatus(true);
+			resetForm();
 			
 	}
 
@@ -80,15 +82,18 @@ export default function CForm({ handleClose, show, children, position, text }) {
 			username: "",
 			email: "",
 			phone: "",
+			messages:""
 		});
 		// console.log(isSubmitting);
 		setIsSubmitting(false);
 		setAttachment(null);
+		
 		setTimeout(() => {
+			handleClose();
 			setData({
 				send: false,
 			});
-		}, 2000);
+		}, 10000);
 	}
 
 	const showHideClassName = show ? "modal d-block" : "modal d-none";
@@ -258,9 +263,9 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							<textarea
 								className="input100 msgborder"
 								type="text"
-								name="message"
-								id="message"
-								value={data.message}
+								name="messages"
+								id="messages"
+								value={data.messages}
 								onChange={(e) => handle(e)}
 								placeholder="Enter Message"
 							/>
