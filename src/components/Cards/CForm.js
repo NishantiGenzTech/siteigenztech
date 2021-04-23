@@ -306,9 +306,9 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							<textarea
 								className="input100 msgborder"
 								type="text"
-								name="message"
-								id="message"
-								value={data.message}
+								name="messages"
+								id="messages"
+								value={data.messages}
 								onChange={(e) => handle(e)}
 								placeholder="Enter Message"
 							/>
