@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./cardcareer.css";
-import ContactForm from "./ContactForm";
-import emailjs from "emailjs-com";
+// import ContactForm from "./ContactForm";
+// import emailjs from "emailjs-com";
 import CForm from "./CForm";
 import data from "../../data/data.json";
 

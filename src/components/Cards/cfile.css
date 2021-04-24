@@ -213,9 +213,11 @@ button {
 
 .error {
 	width: 100%;
-	border: 1px solid hsl(349, 79%, 62%) !important;
-	margin: 0px !important;
-	color: #cc0000;
+    /* border: 1px solid hsl(349, 79%, 62%) !important; */
+    /* margin: 0px !important; */
+    color: #cc0000;
+    position: relative;
+    top: -25px;
 }
 .errorMsg {
 	margin-bottom: 12px;
