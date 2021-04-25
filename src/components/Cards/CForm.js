@@ -1,36 +1,33 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./cfile.css";
 import axios from "axios";
 import FlashMessage from "react-flash-message";
 
 import useForm from "./useForm";
-import validate from './FormValidationRules';
+import validate from "./FormValidationRules";
 
 export default function CForm({ handleClose, show, children, position, text }) {
 	const url = "http://localhost:3002/api/form";
 
-	// const [errors,setErrors]=useState({});
-	const [dataCorrect, setDataCorrect]=useState(false);
-	const [attachment, setAttachment] = useState(null);
-	// const [data, setData] = useState({
-	// 	username: "",
-	// 	email: "",
-	// 	phone: "",
-	// 	messages: "",
-	// 	attachment:null
-
-		
-	// });
 	const {
+		status,
 		values,
 		errors,
 		handleChange,
 		handleSubmit,
 		handleAttachment,
-	  } = useForm(submit, validate);
-	  function submit() {
-		console.log('No errors, submit callback called!');
-	  }
+	} = useForm(submit, validate);
+
+	console.log(status);
+	if (status) {
+		setTimeout(() => {
+			handleClose();
+		}, 4000);
+	}
+
+	function submit() {
+		console.log("No errors, submit callback called!");
+	}
 	// const handleSubmit=(e)=>{
 	// 	e.preventDefault();
 	// 	setErrors(Validation(values));
@@ -43,7 +40,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	// 	})
 
 	// }
-	
+
 	// const formDefaultValue={
 	// 	username: "",
 	// 	email: "",
@@ -58,13 +55,12 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	// 	messages:[],
 	// }
 	// const [formErrors,setFromErrors]=useState()
-	
+
 	// const {formValue, setFormValue}=useState (formDefaultValue)
 	// const {username,email,phone,messages }=formValue
 	// useEffect(()=>{
 	// 	console.dir(formValue)
 	// },[formValue])
-
 
 	// function noBlanks(value){
 	// 	return{
@@ -101,7 +97,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	// 		}
 	// 	})
 	// }
-	const [status, setStatus] = useState(false);
+
 	// const [isSubmitting, setIsSubmitting] = useState(false);
 	// const {inputs, handleInputChange ,errors} = useForm({email:'',password:''},validate);
 	// const [resetData, setresetData] = useState({
@@ -132,40 +128,36 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	// 	setData(newdata);
 	// 	// console.log(newdata.username);
 	// }
-	
+
 	// function handleAttachment(e) {
 	// 	setAttachment(e.target.files[0]);
 	// 	// console.log(attachment);
 	// }
 
-	
-
-// 	function handleSubmit (e) {
-// 		console.log("con 1")
-// 		e.preventDefault();
-// 		const formData = new FormData();
-// 		for (let name in values) {
-// 			formData.append(name, values[name]);
-// 		}
-// 		console.log(data);
-// 		formData.append("attachment", attachment);
-// 		console.log(formData);
-// 	   axios.post(url, formData)
-// 	   .then((res) => {
-// 		   console.log(res.data);
-// 		   setData(
-// 			   {
-// 				   send: true,
-// 			   },
-// 			   resetForm()
-// 		   );
-// 	   })
-// 	   .catch((error) => {
-// 		   console.log(error);
-// 	   });
-// }
-
-	
+	// 	function handleSubmit (e) {
+	// 		console.log("con 1")
+	// 		e.preventDefault();
+	// 		const formData = new FormData();
+	// 		for (let name in values) {
+	// 			formData.append(name, values[name]);
+	// 		}
+	// 		console.log(data);
+	// 		formData.append("attachment", attachment);
+	// 		console.log(formData);
+	// 	   axios.post(url, formData)
+	// 	   .then((res) => {
+	// 		   console.log(res.data);
+	// 		   setData(
+	// 			   {
+	// 				   send: true,
+	// 			   },
+	// 			   resetForm()
+	// 		   );
+	// 	   })
+	// 	   .catch((error) => {
+	// 		   console.log(error);
+	// 	   });
+	// }
 
 	// function resetForm() {
 	// 	setData({
@@ -202,13 +194,13 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	// 	console.log("Helloste");
 	// 	// return alert("Hello");
 	// }
-	
-	function handleUpload(event) {
-		setAttachment(event.target.files[0]);
-	
-		// Add code here to upload file to server
-		// ...
-	  }
+
+	// function handleUpload(event) {
+	// 	setAttachment(event.target.files[0]);
+
+	// 	// Add code here to upload file to server
+	// 	// ...
+	//   }
 	const showHideClassName = show ? "modal d-block" : "modal d-none";
 	// console.log(text);
 	return (
@@ -250,10 +242,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					</div>
 				)}
 
-				<form
-					className="login100-form validate-form"
-					onSubmit={handleSubmit}
-				>
+				<form className="login100-form validate-form" onSubmit={handleSubmit}>
 					<div>
 						{status && (
 							<FlashMessage duration={3000}>
@@ -263,9 +252,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							</FlashMessage>
 						)}
 					</div>
-					<div
-						className={"wrap-input100 validate-input m-b-26"}
-					>
+					<div className={"wrap-input100 validate-input m-b-26"}>
 						<span className="label-input100">
 							Full Name<span className="red"> *</span>
 						</span>
@@ -281,10 +268,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					</div>
 					{errors.username && <p className="error">{errors.username}</p>}
 
-					<div
-						className={"wrap-input100 validate-input m-b-26"
-						}
-					>
+					<div className={"wrap-input100 validate-input m-b-26"}>
 						<span className="label-input100">
 							Email<span className="red"> *</span>
 						</span>
@@ -293,13 +277,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							type="text"
 							id="email"
 							name={"email"}
-							
-							value={values.email  || ""}
+							value={values.email || ""}
 							onChange={handleChange}
 							placeholder="Enter Email"
-							
 						/>
-					
 					</div>
 					{errors.email && <p className="error">{errors.email}</p>}
 					<div className="wrap-input100 validate-input m-b-26">
@@ -307,31 +288,30 @@ export default function CForm({ handleClose, show, children, position, text }) {
 						<input
 							className="input100"
 							type="text"
-							value={values.phone  || ""}
+							value={values.phone || ""}
 							id="phone"
 							onChange={handleChange}
 							name={"phone"}
-							
 							placeholder="Enter Phone(Optional)"
 						/>
-						
-					</div>{errors.phone && <p className="error">{errors.phone}</p>}
+					</div>
+					{errors.phone && <p className="error">{errors.phone}</p>}
 					{text ? (
-						<div
-							className={ "wrap-input100 validate-input m-b-26"
-							}
-						>
+						<div className={"wrap-input100 validate-input m-b-26"}>
 							<span className="label-input100">
-								Resume <span className="red"> *
-								<div className="tooltip" data-direction="bottom">
-							<div className="tooltip__initiator">
-							
-							  <i className="fa fa-info-circle"></i>
-							</div>
-							<div className="tooltip__item">
-							  Plese select only .pdf .doc & .docx file
-							</div>
-						  </div></span>
+								Resume{" "}
+								<span className="red">
+									{" "}
+									*
+									<div className="tooltip" data-direction="bottom">
+										<div className="tooltip__initiator">
+											<i className="fa fa-info-circle"></i>
+										</div>
+										<div className="tooltip__item">
+											Plese select only .pdf .doc & .docx file
+										</div>
+									</div>
+								</span>
 							</span>
 							<div className="input-field">
 								<div className="file-field input-field">
@@ -344,9 +324,8 @@ export default function CForm({ handleClose, show, children, position, text }) {
 											accept=".pdf,.doc,.docx"
 											onChange={handleAttachment}
 											// onChange={(e) => handleAttachment(e)}
-											
+
 											data-error="#err-file-5"
-											
 										/>
 									</div>
 									<div className="file-path-wrapper">
@@ -362,8 +341,6 @@ export default function CForm({ handleClose, show, children, position, text }) {
 											data-msg-required="Please upload a file"
 										/>
 									</div>
-									
-									
 								</div>
 							</div>
 							<span className="focus-input100"></span>
@@ -375,7 +352,6 @@ export default function CForm({ handleClose, show, children, position, text }) {
 								className="input100 msgborder"
 								type="text"
 								name={"messages"}
-							
 								value={values.messages}
 								onChange={handleChange}
 								placeholder="Enter Message"
@@ -383,7 +359,6 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							<span className="focus-input100"></span>
 						</div>
 					)}
-					
 
 					<div className="container-login100-form-btn">
 						<button className="login100-form-btn">
