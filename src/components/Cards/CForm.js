@@ -12,7 +12,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	// const [errors,setErrors]=useState({});
 	const [dataCorrect, setDataCorrect]=useState(false);
 	const [attachment, setAttachment] = useState(null);
-	// const [values, setValues] = useState({
+	// const [data, setData] = useState({
 	// 	username: "",
 	// 	email: "",
 	// 	phone: "",
@@ -26,6 +26,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 		errors,
 		handleChange,
 		handleSubmit,
+		handleAttachment,
 	  } = useForm(submit, validate);
 	  function submit() {
 		console.log('No errors, submit callback called!');
@@ -42,11 +43,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	// 	})
 
 	// }
-	useEffect(()=>{
-		// if (Object.keys(errors).length===0 && dataCorrect){
-		// 	submitForm(true)
-		// }
-	},[errors])
+	
 	// const formDefaultValue={
 	// 	username: "",
 	// 	email: "",
@@ -68,9 +65,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	// 	console.dir(formValue)
 	// },[formValue])
 
-	// useEffect(()=>{
-	// 	console.dir("conponentDidMount")
-	// },[])
+
 	// function noBlanks(value){
 	// 	return{
 	// 		valid:value.replace(/\$+/, "").length>0,
@@ -145,38 +140,30 @@ export default function CForm({ handleClose, show, children, position, text }) {
 
 	
 
-	//  function handleSubmit(e) {
-	// 	// if (!canBeSubmitted()) {
-	// 		e.preventDefault();
-		// 	return;
-		// }
-		// setIsSubmitting(true);
-
-		// const formData = new FormData();
-		// for (let name in formValue) {
-		// 	formData.append(name, formValue[name]);
-		// }
-		// console.log(data);
-		// formData.append("attachment", attachment);
-		// console.log(formData);
-
-	// 	 axios
-	// 		.post(url)
-
-	// 		.then((res) => {
-	// 			console.log(res.data);
-	// 			// setData({
-	// 			// 	send: true,
-	// 			// });
-	// 			console.log("Should go ");
-	// 			// resetForm();
-	// 		})
-
-	// 		.catch((error) => {
-	// 			console.log(error);
-	// 		});
-	// 	setStatus(true);
-	// }
+// 	function handleSubmit (e) {
+// 		console.log("con 1")
+// 		e.preventDefault();
+// 		const formData = new FormData();
+// 		for (let name in values) {
+// 			formData.append(name, values[name]);
+// 		}
+// 		console.log(data);
+// 		formData.append("attachment", attachment);
+// 		console.log(formData);
+// 	   axios.post(url, formData)
+// 	   .then((res) => {
+// 		   console.log(res.data);
+// 		   setData(
+// 			   {
+// 				   send: true,
+// 			   },
+// 			   resetForm()
+// 		   );
+// 	   })
+// 	   .catch((error) => {
+// 		   console.log(error);
+// 	   });
+// }
 
 	
 
@@ -198,7 +185,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 	// 	}, 4000);
 	// }
 
-	
+	// function handleAttachment(e) {
+	// 	setAttachment(e.target.files[0]);
+	// 	console.log(attachment);
+	// }
 
 	// const shouldMarkError = (field) => {
 	// 	const errors = validate(data.email, data.username, data.password);
@@ -332,7 +322,16 @@ export default function CForm({ handleClose, show, children, position, text }) {
 							}
 						>
 							<span className="label-input100">
-								Resume <span className="red"> *</span>
+								Resume <span className="red"> *
+								<div className="tooltip" data-direction="bottom">
+							<div className="tooltip__initiator">
+							
+							  <i className="fa fa-info-circle"></i>
+							</div>
+							<div className="tooltip__item">
+							  Plese select only .pdf .doc & .docx file
+							</div>
+						  </div></span>
 							</span>
 							<div className="input-field">
 								<div className="file-field input-field">
@@ -343,8 +342,9 @@ export default function CForm({ handleClose, show, children, position, text }) {
 											name={""}
 											value={values.attachment || ""}
 											accept=".pdf,.doc,.docx"
-											onChange={handleUpload}
+											onChange={handleAttachment}
 											// onChange={(e) => handleAttachment(e)}
+											
 											data-error="#err-file-5"
 											
 										/>
@@ -355,8 +355,8 @@ export default function CForm({ handleClose, show, children, position, text }) {
 											name={"attachment"}
 											type="text"
 											// id="resume"
-											value={values.attachment}
-											onChange={handleUpload}
+											value={values.attachment || ""}
+											onChange={handleAttachment}
 											placeholder="Click Browse to upload files"
 											data-error="#err-file-5"
 											data-msg-required="Please upload a file"
