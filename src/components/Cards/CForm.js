@@ -1,33 +1,56 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./cfile.css";
-import axios from "axios";
 import FlashMessage from "react-flash-message";
 
 import useForm from "./useForm";
 import validate from "./FormValidationRules";
 
-export default function CForm({ handleClose, show, children, position, text }) {
+export default function CForm({
+	handleClose,
+	show,
+	children,
+	position,
+	text,
+	msg,
+}) {
 	const url = "http://localhost:3002/api/form";
 
 	const {
+		setDisable,
+		disable,
+		setStatus,
 		status,
 		values,
 		errors,
+		attachment,
 		handleChange,
 		handleSubmit,
 		handleAttachment,
 	} = useForm(submit, validate);
 
 	console.log(status);
+	//debugger;
+
 	if (status) {
+		//	handleClose();
 		setTimeout(() => {
+			setStatus(false);
+			console.log(status);
 			handleClose();
-		}, 4000);
+		}, 8000);
 	}
 
 	function submit() {
 		console.log("No errors, submit callback called!");
 	}
+
+	// function add() {
+	// 	{
+	// 		values.username && values.email && attachment && setDisable(false);
+	// 	}
+	// 	console.log(disable);
+	// 	return;
+	// }
 	// const handleSubmit=(e)=>{
 	// 	e.preventDefault();
 	// 	setErrors(Validation(values));
@@ -244,10 +267,22 @@ export default function CForm({ handleClose, show, children, position, text }) {
 
 				<form className="login100-form validate-form" onSubmit={handleSubmit}>
 					<div>
-						{status && (
+						{console.log(values.messages)}
+						{console.log(status)}
+						{console.log(!msg)}
+						{status && text && (
 							<FlashMessage duration={3000}>
 								<strong className="alert-success">
-									Thanku for applying for {text} Position We Will You Shortly
+									Thanku for applying for {text} Position We Will contact You
+									Shortly
+								</strong>
+							</FlashMessage>
+						)}
+
+						{status && msg && (
+							<FlashMessage duration={3000}>
+								<strong className="alert-success">
+									Thanku for Contacting Us We Will Get Back To You Shortly
 								</strong>
 							</FlashMessage>
 						)}
@@ -303,7 +338,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 								<span className="red">
 									{" "}
 									*
-									<div className="tooltip" data-direction="bottom">
+									<div className="tooltip" data-direction="left">
 										<div className="tooltip__initiator">
 											<i className="fa fa-info-circle"></i>
 										</div>
@@ -352,7 +387,7 @@ export default function CForm({ handleClose, show, children, position, text }) {
 								className="input100 msgborder"
 								type="text"
 								name={"messages"}
-								value={values.messages}
+								value={values.messages || ""}
 								onChange={handleChange}
 								placeholder="Enter Message"
 							/>
@@ -361,7 +396,10 @@ export default function CForm({ handleClose, show, children, position, text }) {
 					)}
 
 					<div className="container-login100-form-btn">
-						<button className="login100-form-btn">
+						<button
+							className="login100-form-btn"
+							disabled={!values.email && !values.username && !attachment}
+						>
 							{text ? "APPLY" : "SUBMIT"}
 							&nbsp;&nbsp;
 							<i className="fas fa-angle-double-right"></i>

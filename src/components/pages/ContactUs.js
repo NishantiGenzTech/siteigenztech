@@ -8,12 +8,12 @@ export default class ContactUs extends Component {
 		super(props);
 
 		this.state = {
+			msg: false,
 			modal: false,
 		};
 	}
 	modalOpen(e) {
-		this.setState({ modal: true });
-		
+		this.setState({ modal: true, msg: true });
 	}
 	modalClose(e) {
 		this.setState({
@@ -107,7 +107,6 @@ export default class ContactUs extends Component {
 							</div>
 							<div className="socialicon">
 								<SocialIcon
-									
 									url="https://www.linkedin.com/company/igenztechnologies/"
 									target="_blank"
 									network="linkedin"
@@ -118,6 +117,7 @@ export default class ContactUs extends Component {
 					</div>
 				</div>
 				<CForm
+					msg={this.state.msg}
 					show={this.state.modal}
 					handleClose={(e) => this.modalClose(e)}
 				></CForm>

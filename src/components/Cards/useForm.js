@@ -9,6 +9,8 @@ const useForm = (callback, validate) => {
 	const [attachment, setAttachment] = useState();
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [status, setStatus] = useState(false);
+	const [disable, setDisable] = useState(true);
+	const [msg, setMsg] = useState(false);
 
 	useEffect(() => {
 		if (Object.keys(errors).length === 0 && isSubmitting) {
@@ -60,6 +62,10 @@ const useForm = (callback, validate) => {
 				console.log(error);
 			});
 		setStatus(true);
+
+		setValues({});
+		setAttachment(null);
+		// setDisable(true);
 		console.log("con 4");
 	};
 
@@ -70,6 +76,9 @@ const useForm = (callback, validate) => {
 			...values,
 			[event.target.name]: event.target.value,
 		}));
+		if (values.messages) {
+			setMsg(true);
+		}
 		console.log("in handlechange");
 	};
 
@@ -77,9 +86,14 @@ const useForm = (callback, validate) => {
 		handleChange,
 		handleSubmit,
 		handleAttachment,
+		disable,
+		setStatus,
+		setDisable,
 		values,
 		errors,
 		status,
+		attachment,
+		msg,
 	};
 };
 
